@@ -15,18 +15,30 @@
     <script src="js/skel-layers.min.js"></script>
     <script src="js/init.js"></script>
     <noscript>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body class="landing">
 
     <!-- Header -->
     <header id="header">
+        <script type="text/javascript" color="255,255,255" pointColor="211,211,211" opacity='0.5' zIndex="0" count="100" src="dist/canvas-nest.js"></script>
         <h1 id="logo"><a href="index.html">Shawn</a></h1>
         <nav id="nav">
             <ul>
@@ -67,7 +79,7 @@
 
     <!-- One -->
     <section id="one" class="spotlight style1 bottom">
-        <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+        <span class="image fit main"><img src="images/pic02.gif" alt="" /></span>
         <div class="content">
             <div class="container">
                 <div class="row">
@@ -121,8 +133,24 @@
         <a href="#four" class="goto-next scrolly">Next</a>
     </section>
 
-    <!-- Four -->
-    <section id="four" class="wrapper style1 special fade-up">
+    <!-- four -->
+    <section id="four" class="spotlight style2 right">
+        <span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+        <div class="content">
+            <header>
+                <h2>Interdum amet non magna accumsan</h2>
+                <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+            </header>
+            <p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">Learn More</a></li>
+            </ul>
+        </div>
+        <a href="#five" class="goto-next scrolly">Next</a>
+    </section>
+
+    <!-- Five -->
+    <section id="five" class="wrapper style1 special fade-up">
         <div class="container">
             <header class="major">
                 <h2>Accumsan sed tempus adipiscing blandit</h2>
@@ -131,7 +159,7 @@
             <div class="box alt">
                 <div class="row uniform">
                     <section class="4u 6u(medium) 12u$(xsmall)">
-                        <span class="icon alt major fa-area-chart"></span>
+                        <span class="icon alt major devicon-java-plain"></span>
                         <h3>Ipsum sed commodo</h3>
                         <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
                     </section>
@@ -174,9 +202,7 @@
     <!-- Footer -->
     <footer id="footer">
         <ul class="icons">
-            <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.linkedin.com/in/shawn-c-23a1a5239/" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
             <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
             <li><a href="https://github.com/XiaoSanchez" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
             <li><a href="mailto:sfjpidgkmklsgyi@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>

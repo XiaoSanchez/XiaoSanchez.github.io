@@ -2107,13 +2107,13 @@ body.is-touch #banner {
     width: 15.5em;
     height: 1.5em;
     border-right: 1px solid transparent;
-    animation: typing 3.5s steps(37, end), blink-caret .75s step-end infinite;
+    animation: type 3.5s steps(37, end), blink-caret .75s step-end infinite;
     font-family: Consolas, Monaco;
     word-break: break-all;
     overflow: hidden;
 }
 
-@keyframes typing {
+@keyframes type {
     from {
         width: 0;
     }
