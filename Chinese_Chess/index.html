@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <link rel="icon" href="./img/Xiao.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/Xiao.ico" type="image/x-icon" />
+    <title>chess</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/zzsc.css" type="text/css" />
+    <link rel="stylesheet" href="css/button.css" type="text/css" />
+</head>
+
+<body>
+    <script type="text/javascript" color="169, 169, 169" pointColor="169, 169, 169" opacity='0.7' zIndex="-2" count="300" src="dist/canvas-nest.js"></script>
+    <div class="box" id="box">
+        <div class="chess_left">
+            <canvas id="chess">HTML doesn't supported</canvas>
+            <div>
+                <div class="bn_box" id="bnBox">
+                    <input type="button" name="offensivePlay" id="tyroPlay" value="Noob" class="bttn-unite bttn-sm bttn-default" />
+                    <input type="button" name="offensivePlay" id="superPlay" value="Norm" class="bttn-unite bttn-sm bttn-default" />
+                    <input type="button" name="button" id="" value="Pro" disabled class="bttn-unite bttn-sm bttn-default" />
+                    <input type="button" name="regret" id="regretBn" value="Regret" class="bttn-unite bttn-sm bttn-default" />
+                    <input type="button" name="billBn" id="billBn" class="bn_box" />
+                </div>
+            </div>
+        </div>
+        <div class="chess_right" id="chessRight">
+            <select name="billList" id="billList">
+		</select>
+            <ol id="billBox" class="bill_box">
+            </ol>
+        </div>
+        <div id="moveInfo" class="move_info"> </div>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/play.js"></script>
+    <script src="js/AI.js"></script>
+    <script src="js/bill.js"></script>
+    <script src="js/gambit.js"></script>
+    <div style="text-align:center;clear:both">
+    </div>
+    <i><div align="center">Notes: Beat Norm to unlock Pro</div></i>
+</body>
+
+</html>
