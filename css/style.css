@@ -2068,7 +2068,7 @@ body.is-touch #banner {
 }
 
 .typing {
-    width: 32.5em;
+    width: 33.5em;
     height: 1.5em;
     border-right: 1px solid transparent;
     animation: typing 3.5s steps(37, end), blink-caret .75s step-end infinite;
@@ -2082,7 +2082,7 @@ body.is-touch #banner {
         width: 0;
     }
     to {
-        width: 32.5em;
+        width: 33.5em;
     }
 }
 
