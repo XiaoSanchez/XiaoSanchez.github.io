@@ -19,17 +19,6 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-        }
     </style>
 </head>
 
@@ -92,7 +81,7 @@
         </div>
         <a href="#one" class="goto-next scrolly">Next</a>
     </section>
-    <section id="one" class="spotlight style1 bottom">
+    <section id="one" class="spotlight style2 bottom">
         <span class="image fit main"><img src="img/pic02.gif" alt="" /></span>
         <div class="content">
             <div class="container">
@@ -114,48 +103,26 @@
         </div>
         <a href="#two" class="goto-next scrolly">Next</a>
     </section>
-    <section id="two" class="spotlight style2 right">
-        <span class="image fit main"><img src="img/pic02.gif" alt="" /></span>
-        <div class="content">
-            <header>
-                <h2>Interdum amet non magna accumsan</h2>
-                <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
-            </header>
-            <p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-            <ul class="actions">
-                <li><a href="https://xiaosanchez.github.io/Chinese_Chess/index.html" class="button">Learn More</a></li>
-            </ul>
-        </div>
-        <a href="#three" class="goto-next scrolly">Next</a>
+    <div id="um_das-bar-wrap">
+        <ul id="um_das-bar-items">
+            <a href="https://github.com/XiaoSanchez" class="um_das-bar-link" target="_blank">
+                <li class="um_das-bar-item">
+                    <img class="um_das-bar-img" src="img">
+                </li>
+            </a>
+        </ul>
+        <span id="um_das-bar-close">×</span>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("um_das-bar-close").onclick = function() {
+            document.getElementById("um_das-bar-wrap").style.display = "none";
+        }
+    </script>
+    <section id="two" class="table-wrapper">
+
     </section>
-    <section id="three" class="spotlight style3 left">
-        <span class="image fit main bottom"><img src="img/pic04.jpg" alt="" /></span>
-        <div class="content">
-            <header>
-                <h2>Interdum felis blandit praesent sed augue</h2>
-                <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
-            </header>
-            <p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-            <ul class="actions">
-                <li><a href="#" class="button">Learn More</a></li>
-            </ul>
-        </div>
-        <a href="#four" class="goto-next scrolly">Next</a>
-    </section>
-    <section id="four" class="spotlight style4 right">
-        <span class="image fit main"><img src="img/pic05.jpg" alt="" /></span>
-        <div class="content">
-            <header>
-                <h2>Interdum amet non magna accumsan</h2>
-                <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
-            </header>
-            <p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-            <ul class="actions">
-                <li><a href="#" class="button">Learn More</a></li>
-            </ul>
-        </div>
-        <a href="#five" class="goto-next scrolly">Next</a>
-    </section>
+
     <section id="five" class="wrapper style1 special fade-up">
         <div class="container">
             <header class="major">
@@ -202,8 +169,8 @@
                 </ul>
             </footer>
         </div>
-
     </section>
+
     <footer id="footer">
         <ul class="icons">
             <li><a href="https://www.linkedin.com/in/shawn-c-23a1a5239/" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
