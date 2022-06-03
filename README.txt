@@ -1,4 +1,3 @@
-
 # Shawn C. Personal Website
 
 Further questions on my resume, you can contact：sfjpidgkmklsgyi@gmail.com
