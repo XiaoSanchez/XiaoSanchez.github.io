@@ -590,7 +590,7 @@ body.landing:before {
     margin: -1em 0 0 -1em;
     opacity: 0;
     position: fixed;
-    text-align: center;
+    text-align: left;
     top: 50%;
     width: 2em;
     z-index: -1;
