@@ -21,6 +21,7 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
+            <link rel="stylesheet" href="css/jquery.notebook.css">
 		</noscript>
     </style>
 </head>
@@ -157,9 +158,6 @@
                                 <input id="btn_turn" type="button" value="Page" class="btn_05" />
                             </div>
                         </div>
-                        <h3>.</h3>
-                        <p>.</p>
-                        <h3>.</h3>
                         <p>.</p>
                         <p>.</p>
                         <p>.</p>
@@ -167,9 +165,24 @@
                         <p>.</p>
                         <p>.</p>
                         <p>.</p>
-                        <ul>
-                            <li>.</li>
-                        </ul>
+                        <p>.</p>
+                        <p>.</p>
+                        <div class="editor">
+                            <h1>Try the animation to change image</h1>
+                            <p>This TEXT is a <strong>readme</strong>
+                            </p>
+                            <p>Now, just take a time to test the editor. Yes, <b>this div is the editor</b>. Try to edit this text, select a part of this text and don't forget to try the basic text editor keyboard shortcuts.</p>
+                        </div>
+                        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+                        <script type="text/javascript" src="js/jquery.notebook.js"></script>
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('.editor').notebook({
+                                    autoFocus: true,
+                                    placeholder: 'Type something awesome...'
+                                });
+                            });
+                        </script>
                     </section>
                 </div>
             </div>
