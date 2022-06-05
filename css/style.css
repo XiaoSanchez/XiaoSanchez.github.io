@@ -2141,3 +2141,59 @@ body.is-touch #banner {
     border-radius: 5px;
     letter-spacing: 2px;
 }
+
+#div1 {
+    width: 762px;
+    height: 452px;
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    z-index: 2;
+    left: 68%;
+    top: 210px;
+    margin-left: -381px;
+}
+
+#img {
+    width: 700px;
+    height: 400px;
+    background: url("../img/1.jpeg") center no-repeat;
+    position: absolute;
+    left: 31px;
+    top: 26px;
+}
+
+#btns {
+    width: 762px;
+    margin: 10px auto;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    border-bottom: 10px;
+    bottom: -100px;
+}
+
+#btns input {
+    width: 136px;
+    height: 64px;
+    font-size: 16px;
+    border-width: 0px;
+}
+
+.znsCom {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    position: fixed;
+    top: 20px;
+    text-align: center;
+    color: #FFF;
+    font-family: Verdana;
+    _position: absolute;
+    _top: 20px;
+    z-index: 999;
+}
+
+.znsCom a {
+    color: #132c33;
+    text-decoration: none;
+}
