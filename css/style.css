@@ -1649,6 +1649,7 @@ body.is-touch .spotlight {
 
 .wrapper {
     padding: 6em 0 4em 0;
+    background-color: #131124;
 }
 
 .wrapper.style2 {
@@ -1999,7 +2000,7 @@ body.is-touch #banner {
 /* Footer */
 
 #footer {
-    background: #132c33;
+    background: #131124;
     padding: 6em 0;
     text-align: center;
 }
@@ -2117,7 +2118,8 @@ body.is-touch #banner {
     display: block;
     text-decoration: none;
     color: rgb(237, 237, 237);
-    border: 1px solid #132c33;
+    border: 1px solid #131124;
+    background-color: #131124;
     padding: 5px 10px;
     border-radius: 5px;
     letter-spacing: 2px;
@@ -2125,7 +2127,7 @@ body.is-touch #banner {
 
 .hire-me {
     position: fixed;
-    bottom: 60px;
+    bottom: 80px;
     right: 30px;
 }
 
@@ -2133,7 +2135,8 @@ body.is-touch #banner {
     display: block;
     text-decoration: none;
     color: rgb(237, 237, 237);
-    border: 1px solid #132c33;
+    border: 1px solid #131124;
+    background-color: #131124;
     padding: 5px 10px;
     border-radius: 5px;
     letter-spacing: 2px;
