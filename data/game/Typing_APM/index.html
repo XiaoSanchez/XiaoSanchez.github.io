@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>APM Test</title>
+    <link rel="icon" href="Xiao.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid box ">
+        <div class="stats center">
+            <div class="stat-block if">
+                <div id="cName" class="stat-name yellow if">Correct</div>
+                <div id="cw" class="details if">0</div>
+            </div>
+        </div>
+        <div class="text-display" id="textDisplay">
+        </div>
+        <div class="input-area center">
+            <textarea class="text-input" id="textInput"></textarea>
+        </div>
+        <div id="time">
+            <input id="mytime" type="text" value="00:00:00" readonly>
+            <div id="dd">
+                <input type="button" value="Start">
+                <input type="button" value="Pulse">
+                <input type="button" value="Reset">
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
