@@ -521,6 +521,7 @@ a.active {
     -moz-transition: box-shadow 0.5s ease-in 0.1s;
     -o-transition: box-shadow 0.5s ease-in 0.1s;
     -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
     -webkit-transition: box-shadow 0.5s ease-in 0.1s;
     transition: box-shadow 0.5s ease-in 0.1s;
     color: white;
