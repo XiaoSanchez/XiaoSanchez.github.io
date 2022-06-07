@@ -3,7 +3,7 @@ body {
     margin: 0;
     height: 100vh;
     overflow: hidden;
-    background-color: #132c33;
+    background-color: #35333c;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     z-index: 3;
-    color: #c4d7d6;
+    color: #ccccd6;
 }
 
 .effect1 .letter {
@@ -33,7 +33,7 @@ p {
     font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: #c7d2d4;
+    color: #ccccd6;
     font-weight: 100;
     top: 50%;
     z-index: 3;

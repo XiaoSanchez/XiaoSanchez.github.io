@@ -6,7 +6,7 @@ let tl = anime.timeline({
 tl.add({
     targets: 'section .item',
     width: '100%',
-    backgroundColor: '#21373d',
+    backgroundColor: '#35333c',
     delay: anime.stagger(100)
 });
 
@@ -14,12 +14,12 @@ tl.add({
     targets: 'section .item',
     delay: anime.stagger(70),
     width: '97%',
-    backgroundColor: '#c7d2d4'
+    backgroundColor: '#ccccd6'
 });
 
 tl.add({
     targets: 'section .item',
-    backgroundColor: '#132c33',
+    backgroundColor: '#35333c',
     delay: anime.stagger(50, { from: 'center' })
 });
 
