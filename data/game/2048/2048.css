@@ -1,0 +1,145 @@
+
+body{
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width: 100vw;
+	height: 100vh;
+	margin: 0 0;
+	padding: 0 0 ;
+}
+.score{
+	margin: 0 auto;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bolder;
+	font-size: 20px;
+	color: #d61;
+	text-align: center;
+}
+.cover{
+	display: none;
+	position: absolute;
+	left: 50vw;
+	top: 250px;
+	margin-top: -50px ;
+	margin-left: -40vw;
+	padding: 20px 0;
+	width: 80vw;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 10vw;
+	font-weight: bolder;
+	color: #fff;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 9;
+}
+.p-box{
+	/*position: absolute;
+	left: 50vw;
+	margin-left: -250px;*/
+	position: relative;
+}
+.g-box{
+	position: relative;
+	width: 500px;
+	height: 500px;
+	border-radius: 10px;
+	background-color: #aaa;
+}
+.bg-box{
+	display: flex;
+	flex-flow:row wrap;
+	justify-content:flex-start;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing:border-box;
+}
+.up-box{
+	/*position: absolute;
+	left: 0;
+	top: 0;*/
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+.b-cell{
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.cell{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	transition:left 0.25s ,top 0.25s;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 50px;
+	color: #fff;
+	background-color: #dda;
+}
+.bg7{
+	background-color: #777;
+}
+.bg-2{
+	background-color: #ffd460;
+}
+.bg-4{
+	background-color: #f07b3f;
+}
+.bg-8{
+	background-color: #ea5455;
+}
+.bg-16{
+	background-color: #a3de83;
+}
+.bg-32{
+	background-color: #c4edde;
+}
+.bg-64{
+	background-color: #7ac7c4;
+}
+.bg-128{
+	background-color: #3498db;
+}
+.bg-256{
+	background-color: #005691;
+}
+.bg-512{
+	background-color: #2d4059;
+}
+.bg-1024{
+	background-color: #c50000;
+}
+ 
+
+#r-start{
+	height: 40px;
+	margin: 20px auto;
+	padding: 0 15px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: #d61;
+	z-index: 10;
+}
+
+
+

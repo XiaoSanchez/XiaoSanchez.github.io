@@ -1,267 +1,353 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link rel="icon" href="img/Xiao.ico" type="image/x-icon" />
-    <title>Shawn</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/jquery.dropotron.min.js"></script>
-    <script src="js/jquery.scrollex.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>"
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/Modernizr.js"></script>
-    <script src="js/anime.js"></script>
-    <noscript>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-            <link rel="stylesheet" href="css/jquery.notebook.css">
-		</noscript>
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="icon" href="icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="landing">
-    <header id="header">
-        <script type="text/javascript" color="255,255,255" pointColor="211,211,211" opacity='0.5' zIndex="0" count="100" src="dist/canvas-nest.js"></script>
-        <h1 id="logo"><a href="index1.html">Shawn</a></h1>
-        <nav id="nav">
+<body>
+    <div id="preloader">
+        <div id="status">
+
+            <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+            </div>
+
+        </div>
+    </div>
+    <!-- header -->
+    <header class="navbar-fixed-top">
+        <nav>
             <ul>
-                <li><a href="index1.html">Home</a></li>
-                <li><a href="https://github.com/XiaoSanchez?tab=repositories">Projects</a>
-                    <ul>
-                        <li><a href="#">Front-end Projects</a>
-                            <ul>
-                                <li><a href="#">Html</a>
-                                    <ul>
-                                        <li><a href="https://github.com/XiaoSanchez/Chinese_Chess">Chinese Chess</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Back-end Projects</a>
-                            <ul>
-                                <li><a href="#">Java</a>
-                                    <ul>
-                                        <li><a href="https://github.com/XiaoSanchez/GoBang">GoBang</a></li>
-                                        <li><a href="https://github.com/XiaoSanchez/Tank_War">Tank War</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Python</a>
-                                    <ul>
-                                        <li><a href="https://github.com/XiaoSanchez/Google_Dinosaur">Google Dinosaur</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Other Projects</a>
-                            <ul>
-                                <li><a href="#">Mips</a>
-                                    <ul>
-                                        <li><a href="https://github.com/XiaoSanchez/Mips_Assembly--Power_of_Two">Power of Two</a></li>
-                                        <li><a href="https://github.com/XiaoSanchez/Mips_Assembly--Pig_Latin">Pig Latin</a></li>
-                                        <li><a href="https://github.com/XiaoSanchez/Mips_Assembly-What_to_Wear">What to Wear</a></li>
-                                        <li><a href="https://github.com/XiaoSanchez/Mips_Assembly--land_of_scheme--manipulating_data_structures">Land of Scheme</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <li><a href=" Tech_Stacks.html ">Tech Stack</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <section id="banner">
-        <div class="content">
-            <header>
-                <h2>Hi, I'm Shawn C.</h2>
-            </header>
-            <span class="image"><img src="img/pic01.jpg" alt="" /></span>
-            <p></p>
-            <p></p>
-            <p class="typing">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </div>
-        <a href="#one" class="goto-next scrolly">Next</a>
-    </section>
-
-    <section id="one" class="spotlight style bottom">
-        <span class="image fit main"><img src="img/pic02.gif" alt="" /></span>
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="4u 12u$(medium)">
-                        <header>
-                            <h2>Allow me</h2>
-                            <p class="type">have 30 sec of your time~</p>
-                        </header>
-                    </div>
-                    <div class="4u 12u$(medium)">
-                        <p>In May 2023 I will graduate with a bachelor's degree in computer science. Last summer I had a great internship with the Varsity Tutor where I had the opportunity to put what I learned in the classroom into practice.</p>
-                    </div>
-                    <div class="4u$ 12u$(medium)">
-                        <p>Specifically, I was responsible for helping to write code for a new software release. Right now, I am looking for an entry-level position where I can further develop my programming skills.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <a href="#two" class="goto-next scrolly">Next</a>
-    </section>
-
-    <section id="two" class="wrapper style1 special fade-up">
+    <!-- ./header -->
+    <!-- home -->
+    <div class="section" id="home" data-stellar-background-ratio="0.5">
         <div class="container">
-            <header class="major">
-                <h2>About</h2>
-                <p>More Info About Shawn</p>
-            </header>
-            <div class="row 150%">
-                <div class="4u 12u$(medium)">
-                    <section id="sidebar">
-                        <section>
-                            <h3>PROFILE</h3>
-                            <p>Currently I'm still in class, but am open to any remote(prefered) web/UI development/software engineering/application development/startup opportunities. If you think I'm a good fit, please contact me via: <a href="mailto:sfjpidgkmklsgyi@gmail.com">sfjpidgkmklsgyi@gmail.com</a></p>
-
-                            <footer>
-                                <ul class="actions">
-                                    <li><a href="Shawn_CS_51026075951.pdf" class="button" download>Download CV</a></li>
-                                </ul>
-                            </footer>
-                        </section>
-                        <hr />
-                        <section>
-                            <a href="Tech_Stacks.html" class="image fit"><img src="img/pic04.jpeg" alt="" /></a>
-                            <h3>Education</h3>
-                            <p class="align-left">Bachelor of Science:<br>2019.09 - 2023.05<br>Major in Computer Science. Member in hackathon where group meet to engage in collaborative computer programming. With all skills down below.</p>
-
-                            <p class="align-left">Master of Science:<br>TBA</p>
-                            <footer>
-                                <ul class="actions">
-                                    <li><a href="Tech_Stacks.html" class="button">Learn More</a></li>
-                                </ul>
-                            </footer>
-                        </section>
-                    </section>
-                </div>
-                <div class="8u$ 12u$(medium) important(medium)">
-                    <section id="content">
-                        <div id="div1">
-                            <div id="img"></div>
-                            <div id="btns">
-                                <input id="btn_explode" type="button" value="Explode" class="btn_01" />
-                                <input id="btn_tile" type="button" value="Flip" class="btn_02" />
-                                <input id="btn_bars" type="button" value="Twist" class="btn_03" />
-                                <input id="btn_cube" type="button" value="Cube" class="btn_04" />
-                                <input id="btn_turn" type="button" value="Page" class="btn_05" />
-                            </div>
-                        </div>
-                        <p>.</p>
-                        <p>.</p>
-                        <p>.</p>
-                        <p>.</p>
-                        <p>.</p>
-                        <p>.</p>
-                        <p>.</p>
-                        <p>.</p>
-                        <p>.</p>
-                        <div class="editor">
-                            <h1>Try the animation to change image</h1>
-                            <p>This TEXT is a <strong>readme</strong>
-                            </p>
-                            <p>Now, just take a time to test the editor. Yes, <b>this div is the editor</b>. Try to edit this text.</p>
-                        </div>
-                        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-                        <script type="text/javascript" src="js/jquery.notebook.js"></script>
-                        <script type="text/javascript">
-                            $(document).ready(function() {
-                                $('.editor').notebook({
-                                    autoFocus: true,
-                                    placeholder: 'Type something awesome...'
-                                });
-                            });
-                        </script>
-                    </section>
+            <div class="disply-table">
+                <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
+                    <h4>Shawn Cai</h4>
+                    <h1>Cai &<br /> Yongxiang</h1>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- ./home -->
 
-    <section id="three">
-    </section>
-    <section id="four" class="wrapper style1 special fade-up">
+    <!-- about -->
+    <div class="section" id="about">
         <div class="container">
-            <header class="major">
-                <h2>Coding Skills and Projects Visualization</h2>
-                <p>Check if I'm your best fit</p>
-            </header>
-            <div class="box alt">
-                <div class="row uniform">
-                    <section class="4u 6u(medium) 12u$(xsmall)">
-                        <a href="https://github.com/XiaoSanchez"><span class="icon alt major fa-github"></span></a>
-                        <h3>Mips Assembly</h3>
-                        <p>Mips/C, Able to convert one to another. Projects can be found in github</p>
-                    </section>
-                    <section class="4u 6u$(medium) 12u$(xsmall)">
-                        <a href="https://github.com/XiaoSanchez"><span class="icon alt major fa-github"></span></a>
-                        <h3>Java Programming</h3>
-                        <p>Java/Kotlin, Advanced of using APICloud. Java Projects can be found in github</p>
-                    </section>
-                    <section class="4u$ 6u(medium) 12u$(xsmall)">
-                        <a href="https://github.com/XiaoSanchez"><span class="icon alt major fa-github"></span></a>
-                        <h3>javascript Website CSS</h3>
-                        <p>Js/HTML5/CSS/React, this website isn't enough? Projects can be found in github</p>
-                    </section>
-                    <section class="4u 6u$(medium) 12u$(xsmall)">
-                        <a href="https://github.com/XiaoSanchez"><span class="icon alt major fa-github"></span></a>
-                        <h3>Python Data Visualization</h3>
-                        <p>R/Python data anaylsis and visualization. Projects can be found in github</p>
-                    </section>
-                    <section class="4u 6u(medium) 12u$(xsmall)">
-                        <a href="https://github.com/XiaoSanchez"><span class="icon alt major fa-github"></span></a>
-                        <h3>Unity Engine</h3>
-                        <p>2D unity engine development. Projects can be found in github</p>
-                    </section>
-                    <section class="4u$ 6u$(medium) 12u$(xsmall)">
-                        <a href="https://github.com/XiaoSanchez"><span class="icon alt major fa-github"></span></a>
-                        <h3>SQL Database</h3>
-                        <p>Advanced with SQL commands, use Navicat to visualized.</p>
-                    </section>
-                </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <h4>01</h4>
+                <h1 class="size-50">Know <br /> About me</h1>
+                <div class="h-50"></div>
+                <p>In May 2023 I will graduate with a bachelor's degree in computer science. Last summer I had a great internship with the National STEM where I had the opportunity to put what I learned in the classroom into practice.</p>
+                <p>Specifically, I was responsible for helping to write code for a new website release. Right now, I am looking for an entry-level Software Engineer position where I can further develop my programming skills.</p>
+                <p>If you think I'm a good fit, please contact me via: <a href="mailto:sfjpidgkmklsgyi@gmail.com">sfjpidgkmklsgyi@gmail.com</a></p>
+                <div class="h-50"></div> <img src="img/signature.png" width="230" alt="" />
+                <div class="h-50"></div>
+                <footer>
+                    <a href="Shawn_CS_51026075951.pdf" class="button" download>Download CV</a>
+                </footer>
             </div>
-            <footer class="major">
-                <ul class="actions">
-                    <li><a href=" Tech_Stacks.html " class="button">Projects Visualization</a></li>
+            <div class="col-md-6 about-img-div">
+                <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div>
+                <img src="img/about-img.png" width="400" class="img-responsive" alt="" align="right" data-aos="fade-right" data-aos-delay="0" />
+            </div>
+        </div>
+    </div>
+    <!-- ./about -->
+
+    <!-- experience  -->
+    <div class="section" id="experience">
+        <div class="container">
+            <div class="col-md-12">
+                <h4>02</h4>
+                <h1 class="size-50">My <br /> Experience</h1>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-12">
+                <ul class="timeline">
+                    <li class="timeline-event" data-aos="fade-up">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                            <p class="timeline-event-thumbnail">May 2021 - Present</p>
+                            <h3>Varsity Tutor</h3>
+                            <h4>Programming Instructor/Tutor</h4>
+                            <p><strong>Part-time</strong>
+                                <br>Assisted in assembling lesson plans to administer to students and keep them on track with materials, while granting deep understanding of foundations during tutoring.</p>
+                        </div>
+                    </li>
+                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                            <p class="timeline-event-thumbnail">June 2022 - October 2022</p>
+                            <h3>National STEM</h3>
+                            <h4>Frontend Internship</h4>
+                            <p>Redesigned user interface that doubled website traffic. Monitor the website and troubleshoot any issues, assist in the development and redesign of the website, and make routine updates to the organization's website. </p>
+                        </div>
+                    </li>
                 </ul>
-            </footer>
+            </div>
         </div>
-    </section>
-
-    <div class="hire-me">
-        <a href="#footer">Contact Me</a>
     </div>
-    <div class="go-top">
-        <a href="#">Back Top</a>
+    <!-- ./experience -->
+
+    <!-- projects -->
+    <div class="section" id="projects">
+        <div class="container">
+            <div class="col-md-12">
+                <h4>03</h4>
+                <h1 class="size-50">My <br /> Projects</h1>
+            </div>
+            <!-- main container -->
+            <div class="main-container portfolio-inner clearfix">
+                <!-- portfolio div -->
+                <div class="portfolio-div">
+                    <div class="portfolio">
+                        <!-- portfolio_filter -->
+                        <div class="categories-grid wow fadeInLeft">
+                            <nav class="categories">
+                                <ul class="portfolio_filter">
+                                    <li><a href="" class="active" data-filter="*">All</a></li>
+                                    <li><a href="" data-filter=".Java">Java</a></li>
+                                    <li><a href="" data-filter=".JavaScript">JavaScript</a></li>
+                                    <li><a href="" data-filter=".Python">Python</a></li>
+                                    <li><a href="" data-filter=".Html">Html</a></li>
+                                    <li><a href="" data-filter=".Css">Css</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- portfolio_filter -->
+
+                        <!-- portfolio_container -->
+                        <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6  Java">
+                                <a id="demo01" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/01.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>Tank War</span> <em>Java</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 Html JavaScript Css">
+                                <a id="demo02" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/03.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>2048</span> <em>Html / Css / JavaScript</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 Java">
+                                <a id="demo03" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/02.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>GoBang</span> <em>Java</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 Python">
+                                <a id="demo04" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/04.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>Google Dinosuar</span> <em>Python</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 Css Html">
+                                <a id="demo05" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/05.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>Typing Game</span> <em>Html / Css</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6">
+                                <a id="demo06" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/010.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>R Data Analysis</span> <em>R</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6">
+                                <a id="demo07" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/06.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>Mips Projects</span> <em>Mips Assembly</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 Css Html JavaScript">
+                                <a id="demo08" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/07.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>Personal Website</span> <em>Html / Css / JavaScript</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 Html Css">
+                                <a id="demo09" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/08.png" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>HTML/CSS React plugins</span> <em>Html / Css</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+                        </div>
+                        <!-- end portfolio_container -->
+                    </div>
+                    <!-- portfolio -->
+                </div>
+                <!-- end portfolio div -->
+            </div>
+            <!-- end main container -->
+        </div>
+    </div>
+    <!-- ./projects -->
+
+    <!-- contact -->
+    <div class="section" id="contact">
+        <div class="container">
+            <div class="col-md-12">
+                <h4>04</h4>
+                <h1 class="size-50">Contact Me</h1>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up">
+
+                <h3> Mobile Number</h3>
+                <p>+1 510 260 7595</p>
+                <h3>Email</h3>
+                <p>sfjpidgkmklsgyi@gmail.coms </p>
+
+                <h3>Social Network</h3>
+
+                <ul class="social">
+
+                    <li><a href="#contact"><i class="fa fa-wechat" onclick="wei()"></i></a></li>
+                    <li><a href="https://www.instagram.com/xiao_cheng_z/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/XiaoSanchez"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/shawn-c-23a1a5239/"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <div class="clearfix"></div>
+                Copyright &copy; 2022.Company name All rights reserved.
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-8" data-aos="fade-up">
+                <form class="contact-bg" id="contact-form" name="contact" method="post" novalidate>
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" />
+                    <input type="email" name="email" class="form-control" placeholder="Your E-mail" />
+                    <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
+                    <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px"></textarea>
+                    <button id="submit" type="submit" name="submit" class="btn btn-glance" disabled>Send</button>
+                    <div id="success">
+                        <p class="green textcenter"> Your message was sent successfully! I will be in touch as soon as I can. </p>
+                    </div>
+                    <div id="error">
+                        <p> Something went wrong, try refreshing and submitting the form again. </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ./contact -->
+
+    <!--page-->
+    <div id="animatedModal" class="popup-modal">
+        <div id="btn-close-modal" class="close-animatedModal close-popup-modal"> <i class="ion-close-round"></i> </div>
+        <div class="clearfix"></div>
+        <div class="modal-content">
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Projects<br /> Overview</h2>
+                        <div class="h-50"></div>
+                        <p>For projects I've worked on, I offered two options.</p>
+                        <p>Click left button to visualize my projects. Click right button will show you all my repo on github.</p>
+                        <a href="./html/project.html" align="center">
+                            <div class="btn btn-glance">Visualization</div>
+                        </a>
+                        <a href="https://github.com/XiaoSanchez?tab=repositories" align="center">
+                            <div class="btn btn-glance">Github-Repo</div>
+                        </a>
+                        <br />
+                        <br /> <img src="img/portfolio/github.png " alt=" " class="img-responsive " />
+                        <br />
+                        <br />
+                        <p></p>
+                        <br />
+                        <br /> </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer id="footer">
-        <header class="major">
-            <h2>Contact Me</h2>
-            <p>Contact Info Down Below</p>
-        </header>
-        <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/shawn-c-23a1a5239/" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://www.instagram.com/xiao_cheng_z/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="https://github.com/XiaoSanchez" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-            <li><a href="mailto:sfjpidgkmklsgyi@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Github: <a href="https://github.com/XiaoSanchez">Shawn</a></li>
-        </ul>
-    </footer>
+    <div class="weixin ">
+        <p>添加好友</p>
+        <img src="img/weixin.png " alt=" ">
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js "></script>
+    <!--  plugins  -->
+    <script src="https://www.jq22.com/jquery/bootstrap-3.3.4.js "></script>
+    <script src="js/plugins.js "></script>
+    <script src="js/aos.js "></script>
+
+    <script src="js/jquery.validate.min.js "></script>
+
+    <!--  main script  -->
+    <script src="js/custom.js "></script>
+    <script src="js/base.js "></script>
 </body>
 
 </html>
