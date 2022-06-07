@@ -73,10 +73,10 @@ function openPgm(exeId, _this) {
 				</div>
 				<div class="pgm-menu">
 					<ul>
-						<li>文件</li>
-						<li>编辑</li>
-						<li>查找</li>
-						<li>帮助</li>
+						<li>File</li>
+						<li>Edit</li>
+						<li>Search</li>
+						<li>Help</li>
 					</ul>
 				</div>
 				<div class="pgm-body">
@@ -242,7 +242,7 @@ R(document).click(function(e) {
 
 
 var date = new Date();
-var ymd = date.getFullYear() + '年' + date.getMonth() + '月' + date.getDate() + '日';
+var ymd = date.getMonth() + '.' + date.getDate() + '.' + date.getFullYear();
 var timeStr = date.toTimeString().substring(0, 5);
 R('.task-date p').html(timeStr);
 R('.task-date').first().title = ymd;
