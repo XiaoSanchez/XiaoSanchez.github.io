@@ -62,7 +62,7 @@ function openPgm(exeId, _this) {
         pgm += `<div id="pgm${exeId}" class="program">
 				<div class="pgm-head">
 					<div class="head-left">
-						<img src="../icon/computer.png" alt="">
+						<img src="../img/icon/computer.png" alt="">
 						<p>${pgmName}</p>
 					</div>
 					<div class="head-right">

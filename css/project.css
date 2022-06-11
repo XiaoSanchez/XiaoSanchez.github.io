@@ -123,7 +123,7 @@ body {
 }
 
 .head-right p:nth-child(1) {
-    background: rgba(190, 85, 60, 1) url(../icon/close.png) no-repeat center;
+    background: rgba(190, 85, 60, 1) url(../img/icon/close.png) no-repeat center;
     background-size: 12px 12px;
 }
 
@@ -132,13 +132,13 @@ body {
 }
 
 .head-right p:nth-child(2) {
-    background: rgba(190, 210, 230, .9) url(../icon/max.png) no-repeat center;
+    background: rgba(190, 210, 230, .9) url(../img/icon/max.png) no-repeat center;
     background-size: 12px 12px;
     /*cursor: no-drop;*/
 }
 
 .head-right p:nth-child(3) {
-    background: rgba(190, 210, 230, .9) url(../icon/min.png) no-repeat 60%;
+    background: rgba(190, 210, 230, .9) url(../img/icon/min.png) no-repeat 60%;
     background-size: 12px 12px;
 }
 
@@ -361,7 +361,7 @@ iframe {
     height: 35px;
     line-height: 35px;
     border-radius: 5px;
-    background: url(../icon/folder.png) no-repeat left;
+    background: url(../img/icon/folder.png) no-repeat left;
     background-size: 30px 30px;
 }
 
