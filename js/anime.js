@@ -397,7 +397,7 @@ $(function() {
                 oDivPage.ch = true;
                 oDivPage.innerHTML = '<img />';
                 var oImg = oDivPage.getElementsByTagName('img')[0];
-                oImg.src = 'img
+                oImg.src = 'img/' + (next() + 1) + '.jpeg';
                 Utils.setStyle3(oImg, 'transform', 'scaleX(-1)');
                 Utils.setStyle(oImg, {
                     position: 'absolute',

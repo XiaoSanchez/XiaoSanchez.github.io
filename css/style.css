@@ -40,6 +40,11 @@ h4:before {
     top: 9px;
 }
 
+h5 {
+    font-family: "Poppins";
+    color: #fff
+}
+
 
 /* General
 ==================================================*/
@@ -267,7 +272,7 @@ a.active {
 ==================================================*/
 
 #home {
-    background: url(../img/home-bg-2.png);
+    background: url(../img/home-bg.png);
     background-size: cover;
     height: 100vh;
 }
@@ -844,4 +849,175 @@ input[type=text]:focus {
 .weixin img {
     width: 200px;
     height: 200px;
+}
+
+.arlo_tm_counter_section {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 90px 0 49px 0;
+    position: relative
+}
+
+.arlo_tm_counter_section:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/patterns/ravenna.png);
+    background-repeat: repeat;
+    opacity: .4;
+    z-index: 2
+}
+
+.arlo_tm_counter_section:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 1
+}
+
+.arlo_tm_counter_section .counter_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    text-align: center;
+    position: relative;
+    z-index: 3
+}
+
+.arlo_tm_counter_section ul {
+    margin: 0 0 0 -40px;
+    list-style-type: none
+}
+
+.arlo_tm_counter_section ul li {
+    margin: 0 0 40px 0;
+    float: left;
+    width: 25%;
+    padding-left: 40px
+}
+
+.arlo_tm_counter_section ul li .list_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative
+}
+
+.arlo_tm_counter_section ul li .list_inner h3 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #fff
+}
+
+.arlo_tm_counter_section .counter_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    text-align: center;
+    position: relative;
+    z-index: 3
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft
+}
+
+@keyframes fadeInLeftBig {
+    from {
+        opacity: 0;
+        transform: translate3d(-2000px, 0, 0)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.fadeInLeftBig {
+    animation-name: fadeInLeftBig
+}
+
+.arlo_tm_section {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left
+}
+
+.arlo_tm_preloader {
+    position: fixed;
+    background-color: #fff;
+    z-index: 9999999;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s
+}
+
+.arlo_tm_preloader .spinner_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 33333
+}
+
+.arlo_tm_preloader.loaded {
+    opacity: 0;
+    visibility: hidden
+}
+
+.arlo_tm_preloader:before,
+.arlo_tm_preloader:after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: #1e131d;
+    -webkit-transition: .7s all ease;
+    -o-transition: .7s all ease;
+    transition: .7s all ease
+}
+
+.arlo_tm_preloader:before {
+    top: 0;
+    left: 0
+}
+
+.arlo_tm_preloader:after {
+    bottom: 0;
+    left: 0
+}
+
+.arlo_tm_preloader.loaded:before,
+.arlo_tm_preloader.loaded:after {
+    height: 0
 }

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
-    <link rel="icon" href="icon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
     <link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.6.0.css">
     <link href="css/animate.min.css" rel="stylesheet">
@@ -35,6 +35,12 @@
 </style>
 
 <body>
+
+    <div class="arlo_tm_preloader">
+        <div class="spinner_wrap">
+            <div class="spinner"></div>
+        </div>
+    </div>
     <div id="preloader">
         <div id="status">
             <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
@@ -300,6 +306,43 @@
         </div>
     </div>
     <!-- ./projects -->
+    <!-- /PORTFOLIO -->
+    <!-- COUNTER -->
+    <div class="arlo_tm_section">
+        <div class="arlo_tm_counter_section">
+            <div class="container">
+                <div class="counter_inner">
+                    <ul class="wow fadeInLeft" data-wow-duration="1.5s">
+                        <li>
+                            <div class="list_inner">
+                                <h3 class="arlo_tm_counter" data-from="0" data-to="1791" data-speed="2000">0</h3>
+                                <h5>Coding Hours</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list_inner">
+                                <h3 class="arlo_tm_counter" data-from="0" data-to="181" data-speed="2000">0</h3>
+                                <h5>Projects Finished</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list_inner">
+                                <h3 class="arlo_tm_counter" data-from="0" data-to="5" data-speed="2000">0</h3>
+                                <h5>Awards Achived</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list_inner">
+                                <h3 class="arlo_tm_counter" data-from="0" data-to="737" data-speed="2000">0</h3>
+                                <h5>Network</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /COUNTER -->
     <!-- contact -->
     <div class="section" id="contact">
         <div class="container">
@@ -321,7 +364,7 @@
                     <li><a href="https://www.linkedin.com/in/shawn-c-23a1a5239/"><i class="fa fa-linkedin"></i></a></li>
                 </ul>
                 <div class="clearfix"></div>
-                Copyright &copy; 2022.Company name All rights reserved.
+                Copyright &copy; 2022. Shawn All rights reserved.
                 <div class="h-50"></div>
             </div>
             <div class="col-md-8" data-aos="fade-up">
@@ -344,6 +387,7 @@
         </div>
     </div>
     <!-- ./contact -->
+
     <!--page-->
     <div id="animatedModal" class="popup-modal">
         <div id="btn-close-modal" class="close-animatedModal close-popup-modal"> <i class="ion-close-round"></i> </div>
@@ -381,12 +425,14 @@
     <script src="https://www.jq22.com/jquery/jquery-1.10.2.js "></script>
     <!--  plugins  -->
     <script src="https://www.jq22.com/jquery/bootstrap-3.3.4.js "></script>
+    <script src="js/jquery.validate.min.js "></script>
+    <script src="js/counter.js "></script>
     <script src="js/plugins.js "></script>
     <script src="js/aos.js "></script>
-    <script src="js/jquery.validate.min.js "></script>
     <!--  main script  -->
     <script src="js/custom.js "></script>
     <script src="js/base.js "></script>
+    <script src="js/init.js "></script>
 </body>
 
 </html>

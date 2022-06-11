@@ -644,10 +644,6 @@ Get.prototype.do = function(fn) {
     fn();
 }
 
-
-
-
-
 Get.prototype.extend = function(name, fn) {
     Get.prototype[name] = fn;
 }
@@ -658,3 +654,24 @@ function wei() {
 R('.weixin').bind('mousedown', function() {
     R('.weixin').css('display', 'none')
 })
+
+jQuery('.arlo_tm_counter').each(function() {
+
+    "use strict";
+
+    var el = jQuery(this);
+    el.waypoint({
+        handler: function() {
+
+            if (!el.hasClass('stop')) {
+                el.addClass('stop').countTo({
+                    refreshInterval: 50,
+                    formatter: function(value, options) {
+                        return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                    },
+                });
+            }
+        },
+        offset: '95%'
+    });
+});
