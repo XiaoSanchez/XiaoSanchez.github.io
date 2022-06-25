@@ -102,7 +102,7 @@ $(document).ready(function() {
     });
 
 
-    $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
+    $("#demo00,#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09,#demo10").animatedModal();
 
 
 
