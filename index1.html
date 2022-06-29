@@ -3,50 +3,53 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
     <link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.6.0.css">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/aos.css" rel="stylesheet">
+    <!-- main style -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <style>
+        #form_wrap:before {
+            content: "";
+            position: absolute;
+            bottom: 328px;
+            left: 0px;
+            background: url('img/before.png');
+            width: 530px;
+            height: 316px;
+        }
+        
+        #form_wrap:after {
+            content: "";
+            position: absolute;
+            bottom: 200px;
+            left: 0;
+            background: url('img/after.png');
+            width: 530px;
+            height: 260px;
+        }
+    </style>
 </head>
-<style>
-    #form_wrap:before {
-        content: "";
-        position: absolute;
-        bottom: 328px;
-        left: 0px;
-        background: url('img/before.png');
-        width: 530px;
-        height: 316px;
-    }
-    
-    #form_wrap:after {
-        content: "";
-        position: absolute;
-        bottom: 200px;
-        left: 0;
-        background: url('img/after.png');
-        width: 530px;
-        height: 260px;
-    }
-</style>
 
 <body>
 
-    <div class="arlo_tm_preloader">
-        <div class="spinner_wrap">
-            <div class="spinner"></div>
-        </div>
-    </div>
+    <!-- Preloader -->
     <div id="preloader">
         <div id="status">
+
             <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
             </div>
+
         </div>
     </div>
+    <!-- ./Preloader -->
+
     <!-- header -->
     <header class="navbar-fixed-top">
         <nav>
@@ -59,6 +62,7 @@
         </nav>
     </header>
     <!-- ./header -->
+
     <!-- home -->
     <div class="section" id="home" data-stellar-background-ratio="0.5">
         <div class="container">
@@ -71,6 +75,7 @@
         </div>
     </div>
     <!-- ./home -->
+
     <!-- about -->
     <div class="section" id="about">
         <div class="container">
@@ -94,6 +99,7 @@
         </div>
     </div>
     <!-- ./about -->
+
     <!-- experience  -->
     <div class="section" id="experience">
         <div class="container">
@@ -107,37 +113,39 @@
                     <li class="timeline-event" data-aos="fade-up">
                         <label class="timeline-event-icon"></label>
                         <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">May 2021 - Present</p>
-                            <h3>Varsity Tutor</h3>
-                            <h4>Programming Instructor/Tutor</h4>
-                            <p><strong>Part-time</strong>
-                                <br>Training and teaching Java/Python, JavaScript interactive and Programming algorithms with complete projects.
+                            <p class="timeline-event-thumbnail">June 2022 - Present</p>
+                            <h3>National STEM</h3>
+                            <h4>Software Engineer Internship</h4>
+                            <p>Led front end development of new authentication project for reconstruction Membership article web platform.
                             </p>
-                            <p>Ensured ability to read/modify other's code with penetration tests and kept my coding skills/Algorithm updated. provide feedback to ensure best practices.
+                            <p>Restructured communication flow among twelve departments that cut down paperwork by half. Redesigned user interface, doubled website traffic.
+                            </p>
+                            <p>Originated a backend monitor tool that monitors the visitors/updates, generates a digest, and sends email alerts.
                             </p>
                         </div>
                     </li>
                     <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
                         <label class="timeline-event-icon"></label>
                         <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">June 2022 - October 2022</p>
-                            <h3>National STEM</h3>
-                            <h4>Frontend Internship</h4>
-                            <p>Restructured communication flow among twelve departments that cut down paperwork by half. Redesigned user interface that doubled website traffic.
+                            <p class="timeline-event-thumbnail">May 2017 - December 2019</p>
+                            <h3>Long Island Chinese American Association</h3>
+                            <h4>Group Leader Backstage</h4>
+                            <p>Led backstage departments of the LICAA association to conduct three large parties. (thousands of people participated)
                             </p>
-                            <p>Website maintenance and updates with a team of fifteen. Created a backend monitor tool that would monitor the updates and visitors, create a digest, then would send email alerts.
+                            <p>Planned the parties, and co-directed backstage and personnel review. Organized hundreds of volunteer member recruitment. Certificated in engaging.
                             </p>
                         </div>
                     </li>
                     <li class="timeline-event" data-aos="fade-up" data-aos-delay=".4">
                         <label class="timeline-event-icon"></label>
                         <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">May 2017 - December 2019</p>
-                            <h3>Long Island Chinese American Association</h3>
-                            <h4>Group Leader Backstage</h4>
-                            <p>Coordinated with other departments of the association to organize 3 large parties (thousands of people participated), planning of the parties, managing backstage and personnel review.
+                            <p class="timeline-event-thumbnail">May 2021 - Present(Part-time)</p>
+                            <h3>Varsity Tutor</h3>
+                            <h4>Programming Instructor/Tutor</h4>
+                            <p><strong>Part-time</strong>
+                                <br>Training and teaching Java/Python, JavaScript interactive and Programming algorithms with complete projects.
                             </p>
-                            <p>Organize hundreds of volunteer member recruitment through time. Certificated in engaging.
+                            <p>Ensured ability to read/modify other's code with penetration tests and kept my coding skills/Algorithm buildups.
                             </p>
                         </div>
                     </li>
@@ -146,6 +154,7 @@
         </div>
     </div>
     <!-- ./experience -->
+
     <!-- projects -->
     <div class="section" id="projects">
         <div class="container">
@@ -306,42 +315,6 @@
         </div>
     </div>
     <!-- ./projects -->
-    <!-- counter -->
-    <div class="section" id="counter">
-        <div class="arlo_tm_counter_section">
-            <div class="container">
-                <div class="counter_inner">
-                    <ul class="wow fadeInLeft" data-wow-duration="1.5s">
-                        <li>
-                            <div class="list_inner">
-                                <h3 class="arlo_tm_counter" data-from="0" data-to="1791" data-speed="2000">0</h3>
-                                <h5>Coding Hours</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list_inner">
-                                <h3 class="arlo_tm_counter" data-from="0" data-to="181" data-speed="2000">0</h3>
-                                <h5>Projects Finished</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list_inner">
-                                <h3 class="arlo_tm_counter" data-from="0" data-to="5" data-speed="2000">0</h3>
-                                <h5>Awards Achived</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list_inner">
-                                <h3 class="arlo_tm_counter" data-from="0" data-to="737" data-speed="2000">0</h3>
-                                <h5>Network</h5>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /counter -->
 
     <!-- contact -->
     <div class="section" id="contact">
@@ -352,13 +325,16 @@
                 <div class="h-50"></div>
             </div>
             <div class="col-md-4" data-aos="fade-up">
+
                 <h3> Mobile Number</h3>
                 <p>+1 510 260 7595</p>
                 <h3>Email</h3>
                 <p>sfjpidgkmklsgyi@gmail.coms </p>
+
                 <h3>Social Network</h3>
+
                 <ul class="social">
-                    <li><a href="#contact"><i class="fa fa-wechat" onclick="wei()"></i></a></li>
+                    <li><a href="#"><i class="fa wechat"></i></a></li>
                     <li><a href="https://www.instagram.com/xiao_cheng_z/"><i class="fa fa-instagram"></i></a></li>
                     <li><a href="https://github.com/XiaoSanchez"><i class="fa fa-github"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/shawn-c-23a1a5239/"><i class="fa fa-linkedin"></i></a></li>
@@ -388,7 +364,7 @@
     </div>
     <!-- ./contact -->
 
-    <!--page-->
+    <!--DEMO01-->
     <div id="animatedModal" class="popup-modal">
         <div id="btn-close-modal" class="close-animatedModal close-popup-modal"> <i class="ion-close-round"></i> </div>
         <div class="clearfix"></div>
@@ -401,11 +377,11 @@
                         <p>For projects I've worked on, they are all set to be reviewed.</p>
                         <p>Frontend can be visualized by left button(once you logout password is '0000' to login again), while backend and Data Analysis/AI are only available on github.</p>
                         <a href="./html/MacOS.html" align="center">
-                            <div class="btn btn-glance">Frontend Web Visualization</div>
+                            <div class="btn btn-glance">MacOS</div>
                         </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="./html/List.html" align="center">
-                            <div class="btn btn-glance">List</div>
+                        <a href="./html/Project.html" align="center">
+                            <div class="btn btn-glance">Overview</div>
                         </a>
                         <br />
                         <br /> <img src="img/portfolio/github.png " alt=" " class="img-responsive " />
@@ -418,22 +394,18 @@
             </div>
         </div>
     </div>
-    <div class="weixin ">
-        <p>添加好友</p>
-        <img src="img/weixin.png " alt=" ">
-    </div>
+    <!--./DEMO01-->
+
     <!-- jQuery -->
-    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js "></script>
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
     <!--  plugins  -->
-    <script src="https://www.jq22.com/jquery/bootstrap-3.3.4.js "></script>
-    <script src="js/jquery.validate.min.js "></script>
-    <script src="js/counter.js "></script>
-    <script src="js/plugins.js "></script>
-    <script src="js/aos.js "></script>
+    <script src="https://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script src="js/jquery.validate.min.js"></script>
+
     <!--  main script  -->
-    <script src="js/custom.js "></script>
-    <script src="js/base.js "></script>
-    <script src="js/init.js "></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
