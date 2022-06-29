@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Project Visualization</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/79479480?v=4">
+    <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Projects Visualization</h1>
+        <h2>Front End Projects & Full Stack Projects Visualization</h2>
+    </header>
+
+    <section class=" demo ">
+
+        <dl class="list nigiri ">
+            <dt>Games</dt>
+            <dd><a href="../Games/Chinese_Chess/index.html ">Chinese Chess</a></dd>
+            <dd><a href="../Games/Flappy_Bird/index.html ">Flappy Bird</a></dd>
+            <dd><a href="../Games/Fruit_Ninja/index.html ">Fruit Ninja</a></dd>
+            <dd><a href="# ">Go Bang</a></dd>
+            <dd><a href="# ">Google Dinosaur</a></dd>
+            <dd><a href="../Games/Slot_Machine/index.html ">Slot Machine</a></dd>
+            <dd><a href="../Games/Space War/index.html ">Space War</a></dd>
+            <dd><a href="../Games/Speed_Typing/index.html ">Speed Typing</a></dd>
+            <dd><a href="# ">Tank War</a></dd>
+            <dd><a href="# ">Land of Scheme</a></dd>
+        </dl>
+
+        <dl class="list maki ">
+            <dt>Plugins</dt>
+            <dd><a href="# ">Ana-kyu</a></dd>
+            <dd><a href="# ">Chutoro</a></dd>
+            <dd><a href="# ">Kaiware</a></dd>
+            <dd><a href="# ">Kampyo</a></dd>
+            <dd><a href="# ">Kappa</a></dd>
+            <dd><a href="# ">Natto</a></dd>
+            <dd><a href="# ">Negitoro</a></dd>
+            <dd><a href="# ">Oshinko</a></dd>
+            <dd><a href="# ">Otoro</a></dd>
+            <dd><a href="# ">Tekka</a></dd>
+        </dl>
+
+        <dl class="list sashimi ">
+            <dt>Forums</dt>
+            <dd><a href="../Forums/404.html ">404</a></dd>
+            <dd><a href="../Forums/Alien.html ">Alien</a></dd>
+            <dd><a href="../Forums/Colored_Text.html ">Colored Text</a></dd>
+            <dd><a href="../Forums/Dark-LightMode/index.html ">Dark/Light Mode</a></dd>
+            <dd><a href="../Forums/html_Editor/index.html ">Html Editor</a></dd>
+            <dd><a href="../Forums/object.html ">Object</a></dd>
+            <dd><a href="../Forums/Old_TV.html ">Old TV</a></dd>
+            <dd><a href="../Forums/Real_Time_Data/index.html ">Realtime Data</a></dd>
+            <dd><a href="../Forums/Resume/index.html ">Resume</a></dd>
+            <dd><a href="../Forums/Text_Image.html ">Text Image</a></dd>
+        </dl>
+
+        <a href="# " class="toggle ">Folds</a>
+
+    </section>
+
+    <div class="warning ">
+        <div class="message ">
+            <h1>CSS 3D Not Detected :(</h1>
+            <p>I couldn't detect your browser's CSS 3D capabilities. If I'm wrong, please <a href="https://github.com/soulwire/Makisu/issues " target="_blank ">file an issue</a>, otherwise, try a <a href="http://www.google.com/chrome " target="_blank ">sexier browser</a></p>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js "></script>
+    <script src="js/makisu.js "></script>
+    <script>
+        // The `enabled` flag will be `false` if CSS 3D isn't available
+
+        if ($.fn.makisu.enabled) {
+
+            var $sashimi = $('.sashimi');
+            var $nigiri = $('.nigiri');
+            var $maki = $('.maki');
+
+            // Create Makisus
+
+            $nigiri.makisu({
+                selector: 'dd',
+                overlap: 0.85,
+                speed: 1.7
+            });
+
+            $maki.makisu({
+                selector: 'dd',
+                overlap: 0.6,
+                speed: 0.85
+            });
+
+            $sashimi.makisu({
+                selector: 'dd',
+                overlap: 0.2,
+                speed: 0.5
+            });
+
+            // Open all
+
+            $('.list').makisu('open');
+
+            // Toggle on click
+
+            $('.toggle').on('click', function() {
+                $('.list').makisu('toggle');
+            });
+
+        } else {
+
+            $('.warning').show();
+        }
+    </script>
+</body>
+
+</html>
