@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
     <link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.6.0.css">
@@ -31,6 +33,12 @@
             background: url('img/after.png');
             width: 530px;
             height: 260px;
+        }
+        
+        .container {
+            position: relative;
+            overflow: hidden;
+            perspective: 2000px;
         }
         
         #modal {
@@ -76,7 +84,6 @@
 </head>
 
 <body>
-
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">
@@ -103,14 +110,168 @@
 
     <!-- home -->
     <div class="section" id="home" data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="disply-table">
-                <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
-                    <h4>Shawn Cai</h4>
-                    <h1>Cai &<br /> Yongxiang</h1>
+        <div class="container" style="height: 100vh; width: 100vw;">
+            <div class="scroller">
+                <div class="room room--current">
+                    <div class="room__side room__side--back">
+                        <img class="room__img" src="img/set4/3.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set4/6.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--left">
+                        <img class="room__img" src="img/set4/7.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set4/1.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set4/2.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--right">
+                        <img class="room__img" src="img/set4/4.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set4/5.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set4/8.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--bottom"></div>
                 </div>
+                <!-- /room -->
+                <div class="room">
+                    <div class="room__side room__side--back">
+                        <img class="room__img" src="img/set2/1.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set2/6.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--left">
+                        <img class="room__img" src="img/set2/3.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set2/4.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set2/5.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--right">
+                        <img class="room__img" src="img/set2/8.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set2/7.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set2/2.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--bottom"></div>
+                </div>
+                <!-- /room -->
+                <div class="room">
+                    <div class="room__side room__side--back">
+                        <img class="room__img" src="img/set3/1.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set3/6.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--left">
+                        <img class="room__img" src="img/set3/3.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set3/4.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set3/5.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--right">
+                        <img class="room__img" src="img/set3/8.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set3/7.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set3/2.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--bottom"></div>
+                </div>
+                <!-- /room -->
+                <div class="room">
+                    <div class="room__side room__side--back">
+                        <img class="room__img" src="img/set1/3.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set1/6.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--left">
+                        <img class="room__img" src="img/set1/7.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set1/1.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set1/2.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--right">
+                        <img class="room__img" src="img/set1/4.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set1/5.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set1/8.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--bottom"></div>
+                </div>
+                <!-- /room -->
+                <div class="room">
+                    <div class="room__side room__side--back">
+                        <img class="room__img" src="img/set5/7.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set5/5.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--left">
+                        <img class="room__img" src="img/set5/6.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set5/4.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set5/3.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--right">
+                        <img class="room__img" src="img/set5/2.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set5/1.jpg" alt="Some image" />
+                        <img class="room__img" src="img/set5/8.jpg" alt="Some image" />
+                    </div>
+                    <div class="room__side room__side--bottom"></div>
+                </div>
+                <!-- /room -->
             </div>
         </div>
+        <!-- /container -->
+        <div class="content">
+            <header class="codrops-header">
+                <button class="btn btn--info btn--toggle"></button>
+                <button class="btn btn--menu btn--toggle"></button>
+                <div class="overlay overlay--menu"></div>
+                <div class="overlay overlay--info"></div>
+            </header>
+            <h4 class="location">L'avenir est ce qu'il y a de pire dans le présent.</h4>
+            <div class="slides">
+                <div class="slide">
+                    <h1 class="slide__name">Yongxiang <br/>Cai</h1>
+                    <h3 class="slide__title">
+                        <span>&ldquo;Shawn&rdquo;</span>
+                        <div class="slide__number">Room <strong>Tenjin</strong></div>
+                    </h3>
+                    <p class="slide__date"></p>
+                </div>
+                <div class="slide">
+                    <h1 class="slide__name">Yongxiang <br/>Cai</h1>
+                    <h3 class="slide__title">
+                        <span>&ldquo;Shawn&rdquo;</span>
+                        <div class="slide__number">Room <strong>Suijin</strong></div>
+                    </h3>
+                    <p class="slide__date"></p>
+                </div>
+                <div class="slide">
+                    <h1 class="slide__name">Yongxiang <br/>Cai</h1>
+                    <h3 class="slide__title">
+                        <span>&ldquo;Shawn&rdquo;</span>
+                        <div class="slide__number">Room <strong>Izanami</strong></div>
+                    </h3>
+                    <p class="slide__date"></p>
+                </div>
+                <div class="slide">
+                    <h1 class="slide__name">Yongxiang <br/>Cai</h1>
+                    <h3 class="slide__title">
+                        <span>&ldquo;Shawn&rdquo;</span>
+                        <div class="slide__number">Room <strong>Raijin</strong></div>
+                    </h3>
+                    <p class="slide__date"></p>
+                </div>
+                <div class="slide">
+                    <h1 class="slide__name">Yongxiang <br/>Cai</h1>
+                    <h3 class="slide__title">
+                        <span>&ldquo;Shawn&rdquo;</span>
+                        <div class="slide__number">Room <strong>Hachiman</strong></div>
+                    </h3>
+                    <p class="slide__date"></p>
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="btn btn--nav btn--nav-left">
+                    <svg class="nav-icon nav-icon--left" width="42px" height="12px" viewBox="0 0 70 20">
+                        <path class="nav__triangle" d="M52.5,10L70,0v20L52.5,10z"/>
+                        <path class="nav__line" d="M55.1,11.4H0V8.6h55.1V11.4z"/>
+                    </svg>
+                </button>
+                <button class="btn btn--nav btn--nav-right">
+                    <svg class="nav-icon nav-icon--right" width="42px" height="12px" viewBox="0 0 70 20">
+                        <path class="nav__triangle" d="M52.5,10L70,0v20L52.5,10z"/>
+                        <path class="nav__line" d="M55.1,11.4H0V8.6h55.1V11.4z"/>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+        <!-- /content -->
+        <div class="overlay overlay--loader overlay--active"></div>
     </div>
     <!-- ./home -->
 
@@ -457,3 +618,12 @@
 </body>
 
 </html>
+
+<!--<div class="container">
+            <div class="disply-table">
+                <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
+                    <h4>Shawn Cai</h4>
+                    <h1>Cai &<br /> Yongxiang</h1>
+                </div>
+            </div>
+        </div>
