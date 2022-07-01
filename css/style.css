@@ -922,6 +922,8 @@ a.active {
     overflow: hidden;
     display: block;
     margin-bottom: 30px;
+    height: 330px;
+    width: 330px;
 }
 
 .portfolio_item .portfolio_item_hover {
@@ -5732,7 +5734,7 @@ table {
     border-spacing: 0;
 }
 
-.demo-3 {
+.gimg {
     --color-text: #454847;
     --color-bg: #1d2121;
     --color-link: #454847;
@@ -5764,11 +5766,11 @@ table {
 /* Glitch styles */
 
 .glitch {
-    position: relative;
+    position: absolute;
     width: var(--glitch-width);
-    max-width: 400px;
+    max-width: 700px;
     height: var(--glitch-height);
-    max-height: calc(400px * 1.25);
+    max-height: calc(700px * 1.25);
     overflow: hidden;
     margin: 0 auto;
 }
