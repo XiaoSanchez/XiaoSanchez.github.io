@@ -5789,10 +5789,6 @@ table {
     background-blend-mode: var(--blend-mode-1);
 }
 
-.glitch--style-6 .glitch__img {
-    background-image: url(../img/about-img.png);
-}
-
 
 /* Set the background colors for the glitch images*/
 
