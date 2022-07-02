@@ -3787,10 +3787,6 @@ iframe ::-webkit-scrollbar-corner {
     background: url(https://avatars.githubusercontent.com/u/79479480?v=4) !important;
 }
 
-.icon[data-icon=user] {
-    background: url("https://raw.githubusercontent.com/aboredvaro/codepen_resources/main/macOS/img/user/pic/1.png") !important;
-}
-
 @keyframes bounce {
     0%,
     40%,
