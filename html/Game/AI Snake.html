@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"  />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+        <link rel="icon" href="https://avatars.githubusercontent.com/u/79479480?v=4" type="image/x-icon">
+        <title> AI Snake </title>
+    </head>
+    <style>
+        body{
+            width: 100%;
+        }
+        #traw{
+            border: 1px solid black;
+        }
+    </style>
+    <body>
+        <center>
+            <canvas id="traw" width="600" height="600"></canvas>
+        </center>
+    </body>
+    <script>
+        function  init(){
+            var gradeCount = 0
+            var isGameOver = false
+            class mapSnakeGame{
+                constructor(average){
+                    this.canvas = document.getElementById('traw')
+                    this.canvasContext = this.canvas.getContext('2d')
+                    this.width = this.canvas.width
+                    this.height = this.canvas.height
+                    this.average = average ?? 30
+                    this.everyLast = this.canvas.width / average
+                    this.egg = null
+                }
+                trawCube(){ 
+                    this.canvasContext.beginPath()
+                    for(var i = 0; i < this.average; i++)
+                    {
+                        this.canvasContext.moveTo(0, i * this.everyLast)
+                        this.canvasContext.lineTo(this.width, i * this.everyLast)
+                        this.canvasContext.moveTo(i * this.everyLast, 0)
+                        this.canvasContext.lineTo(i * this.everyLast, this.height)
+                    }
+                    this.canvasContext.closePath()
+                    this.canvasContext.stroke()
+                }
+                trawOneCube(x, y, color){ 
+                    this.canvasContext.beginPath()
+                    this.canvasContext.fillStyle = color
+                    this.canvasContext.rect(x * this.everyLast, y * this.everyLast, this.everyLast, this.everyLast)
+                    this.canvasContext.closePath()
+                    this.canvasContext.fill()
+                    this.canvasContext.strokeStyle = 'blake'
+                    this.canvasContext.stroke()
+                }
+                trawClrea(){
+                    this.canvas.width = this.width
+                }
+                nodeSave(){  
+                    this.mapArray = new Array() 
+                    for(var i = 0; i < Number(this.average); i++){
+                        var item = new Array()
+                        for(var j = 0; j < Number(this.average); j++)
+                        {
+                            item.push({ x: i, y: j, isNode: false })
+                        }
+                        this.mapArray.push(item)
+                    }
+                }
+            }
+            class snakeNode{ 
+                constructor(x, y, isHead = false){
+                    this.x = Number(x)
+                    this.y = Number(y)
+                    this.isHead = isHead
+                }
+            }
+            class snake extends mapSnakeGame { 
+                constructor(nodeCost, direction, average){
+                    super(average)
+                    this.nodeCost = nodeCost
+                    this.direction =  direction
+                    super.nodeSave()
+                    this.nodeMap()
+                }
+                nodeMap(){ 
+                    super.nodeSave()
+                    for(var item of this.nodeCost){
+                        let x = Number(item.x)
+                        let y = Number(item.y)
+                        try{
+                            this.mapArray[x][y].isNode = true
+                        }catch(e){
+                            console.log(e)
+                        }
+                    }
+                }
+                movePath(x, y){ 
+                    var costNode = this.nodeCost
+                    var item = costNode.pop()
+                    costNode.unshift(item)
+                    item.x = x
+                    item.y = y
+                    item.isHead = true
+                    costNode[1].isHead = false
+                }
+                movePathDirection(){ 
+                    var x = 0
+                    var y = 0
+                    if(this.direction == 'left'){
+                        x = -1
+                    }else if(this.direction == 'right'){
+                        x = 1
+                    }else if(this.direction == 'top'){
+                        y = -1
+                    }else if(this.direction == 'bottom'){
+                        y = 1
+                    }
+                    x += this.nodeCost[0].x
+                    y += this.nodeCost[0].y
+                    this.movePath(x, y)
+                    this.isBoundary()
+                }
+                isBoundary(){ 
+                    var item = this.nodeCost[0]
+                    var items = JSON.parse(JSON.stringify(this.nodeCost)) 
+                    items.shift()
+                    const isFun = (value) => {  return value.x == item.x && value.y == item.y }
+                    if(item.x >= this.average || item.y >= this.average){ 
+                        isGameOver = true
+                    }else if(item.x < 0 || item.y  < 0){
+                        isGameOver = true
+                    }else if(items.some(isFun)){
+                        isGameOver = true
+                    }
+                    if(this.egg && (this.egg.x == item.x && this.egg.y == item.y)){ 
+                        this.incre0ase()
+                        this.egg = null
+                    }
+                }
+                incre0ase(){ 
+                    gradeCount++
+                    var nodeLast = this.nodeCost[this.nodeCost.length - 1]
+                    var item = null
+                    if(this.direction == 'left'){
+                        item = new snakeNode(nodeLast.x + 1,  nodeLast.y, false)
+                    }else if(this.direction == 'right'){
+                        item = new snakeNode(nodeLast.x - 1,  nodeLast.y, false)
+                    }else if(this.direction == 'top'){
+                        item = new snakeNode(nodeLast.x,  nodeLast.y + 1, false)
+                    }else if(this.direction == 'bottom'){
+                        item = new snakeNode(nodeLast.x,  nodeLast.y - 1, false)
+                    }
+                    this.nodeCost.push(item)
+                }
+                trawBody(){ 
+                    for(var item of this.nodeCost){
+                        this.trawOneCube(item.x, item.y, item.isHead? 'blue' : 'orange')
+                    }
+                }
+                snakeEgg(){ 
+                    if(!this.egg){
+                        this.nodeMap()
+                        var itemNode = new Array()
+                        this.mapArray.forEach(items=> { 
+                            itemNode.push(
+                                items.filter(item=>{
+                                    return !item.isNode
+                                })
+                            )
+                        })
+                        var lenthI1 = itemNode.length
+                        var lenthI1Random = Math.floor(Math.random() * lenthI1)
+                        var lenthI2 = itemNode[lenthI1Random].length
+                        var lenthI2Random = Math.floor(Math.random() * lenthI2)
+                        var item = itemNode[lenthI1Random][lenthI2Random]
+                        this.egg = { x: item.x, y: item.y }
+                    }
+                    this.trawOneCube(this.egg.x, this.egg.y, 'red')
+                }
+            }
+            var snakeList = new Array()
+            snakeList.push(new snakeNode(1, 8, true))
+            snakeList.push(new snakeNode(1, 7))
+            snakeList.push(new snakeNode(1, 6))
+            snakeList.push(new snakeNode(1, 5))
+            snakeList.push(new snakeNode(1, 4))
+            snakeList.push(new snakeNode(1, 3))
+            snakeList.push(new snakeNode(1, 2))
+            snakeList.push(new snakeNode(1, 1))
+            snakeList.push(new snakeNode(1, 0))
+            var snakeEntity = new snake(snakeList, 'bottom', 20)
+            snakeEntity.trawBody()
+            snakeEntity.snakeEgg()
+            var newTime = new Date()
+            var gameStart = (()=>{
+                let oldTime = new Date()
+                if(isGameOver) 
+                {
+                    return
+                }
+                if(oldTime - newTime > 20){
+                    newTime = oldTime
+                    snakeEntity.trawClrea()
+                    snakeEntity.movePathDirection()
+                    snakeEntity.trawBody()
+                    snakeEntity.snakeEgg()
+                }
+                requestAnimationFrame(gameStart)
+            })
+            var newTime2 =  new Date()
+            var clacDican = () => { 
+                var oldTime = new Date()
+                if(oldTime - newTime2 > 20 || true){
+                    newTime2 = oldTime
+                    var item = snakeEntity.nodeCost[0]
+                    var egg = snakeEntity.egg
+                    var items = neigBor(item, egg)
+                    var min = items[0]
+                    for(var itema of items){
+                        if(min.h > itema.h){
+                            min = itema
+                        }
+                    }
+                    directionSnow(min, item)
+                }
+                requestAnimationFrame(clacDican)
+            }
+            function aStartClac (){
+                var openlist = []
+                var closeList = []
+                var snowTop = snakeEntity.nodeCost[0] 
+                var endEgg = snakeEntity.egg 
+                var resultCost = null
+                var resultCostList = []
+                openlist.push({ x: snowTop.x, y: snowTop.y, h: 999 })
+                closeList.unshift({ x: snowTop.x, y: snowTop.y, h: 999 })
+                while(openlist.length){
+                    var firstItem = openlist.shift()
+                    if(firstItem.x == endEgg.x && firstItem.y == endEgg.y) {
+                        var itemValue = { x: endEgg.x, y: endEgg.y, h: 0, father: firstItem }
+                        resultCost = itemValue
+                        break
+                    }
+                    var items = neigBor(firstItem, endEgg, closeList)
+                    while(items.length){
+                        var firstItemChild = items.shift()
+                        firstItemChild.father = firstItem
+                        openlist.push(firstItemChild)
+                        if(firstItemChild.x == endEgg.x && firstItemChild.y == endEgg.y) {
+                            var itemValue = { x: endEgg.x, y: endEgg.y, h: 0, father: firstItemChild }
+                            resultCost = itemValue
+                            break
+                        }
+                        closeList.unshift(firstItemChild)
+                    }
+                    sortList(openlist)
+                }
+                try{
+                    while(resultCost.father){
+                        var item = resultCost.father
+                        resultCostList.unshift({x: item.x, y: item.y, h: item.h})
+                        resultCost = resultCost.father
+                    }
+                }
+                catch{
+                    return null
+                }
+                resultCostList.shift()
+                return resultCostList[0]
+            }
+            var newTime3 = new Date()
+            function aStartClacSnowShe(){
+                var oldTime = new Date()
+                if(isGameOver) 
+                {
+                    gradeCount=0
+                    return
+                }
+                if(oldTime - newTime3 > 20)
+                {
+                    var minItem = aStartClac()
+                    var item = snakeEntity.nodeCost[0]
+                    if(!minItem){ 
+                        var egg = snakeEntity.egg
+                        var items = neigBor(item, egg)
+                        minItem = items[0]
+                        for(var itema of items){
+                            if(minItem.h > itema.h){
+                                minItem = itema
+                            }
+                        }
+                    }
+                    directionSnow(minItem, item)
+                    snakeEntity.trawClrea()
+                    snakeEntity.movePathDirection()
+                    snakeEntity.trawBody()
+                    snakeEntity.snakeEgg()
+                    newTime3 = oldTime
+                }
+                requestAnimationFrame(aStartClacSnowShe)
+            }
+            aStartClacSnowShe()
+            function directionSnow(min, item){
+                if(!min || !item) return
+                if(min.x < item.x && min.y == item.y && snakeEntity.direction != 'left'){
+                    snakeEntity.direction = 'left'
+                }else if(min.x > item.x && min.y == item.y && snakeEntity.direction != 'right'){
+                    snakeEntity.direction = 'right'
+                }else if(min.x == item.x && min.y < item.y && snakeEntity.direction != 'top'){
+                    snakeEntity.direction = 'top'
+                }else if(min.x == item.x && min.y > item.y && snakeEntity.direction != 'bottom'){
+                    snakeEntity.direction = 'bottom'
+                }
+            }
+            function sortList(a){
+                for (let index = 0; index < a.length; index++) {
+                    for (let j = 0; j < a.length - index - 1; j++) {
+                        if(a[j+1].h<a[j].h){
+                            var temp = a[j+1]
+                            a[j+1] = a[j]
+                            a[j] = temp
+                        }
+                    }
+                }
+            }
+            function neigBor(startItem, end, closeList = null){
+                var array = []
+                array.push({ x: startItem.x, y: startItem.y - 1 })
+                array.push({ x: startItem.x - 1, y: startItem.y })
+                array.push({ x: startItem.x, y: startItem.y + 1 })
+                array.push({ x: startItem.x + 1, y: startItem.y })
+                var item = snakeEntity.nodeCost[0]
+                var items = JSON.parse(JSON.stringify(snakeEntity.nodeCost)) 
+                items.shift()
+                const isFun = (value) => { return value.x == ii.x && value.y == ii.y }
+                for(var i=3; i>=0; i--){
+                    var ii = array[i]
+                    if( ii.x < 0 || ii.y < 0 || ii.x > 20 - 1 || ii.y > 20 - 1) { ii = null; array.splice(i, 1) } 
+                    else if( items.some(isFun) ) { ii = null; array.splice(i, 1) } 
+                    else if( isCloseSome(ii, closeList) ) { ii = null; array.splice(i, 1)  }
+                    ii && ( ii.h = OuShi({x: ii.x, y: ii.y}, end) )
+                }
+                return array
+            }
+            function isCloseSome(value, closeList){
+                if(!closeList) return false
+                for(var item of closeList){
+                    if(item.x == value.x && item.y == value.y) { return true }
+                }
+                return false
+            }
+            function Run(startItem, endItem){
+                var Gx = startItem.x - endItem.x
+                var Gy = startItem.y - endItem.y
+                var G = Math.abs(Gx) + Math.abs(Gy)
+                return G
+            }
+            function OuShi(start, end){
+                var Gx = start.x - end.x
+                var Gy = start.y - end.y
+                var G = Math.floor( Math.sqrt( Math.pow(Gx, 2) + Math.pow(Gy, 2) ) )
+                return G
+            }
+        }
+        init()
+    </script>
+</html>

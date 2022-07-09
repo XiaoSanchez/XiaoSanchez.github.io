@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/79479480?v=4" type="image/x-icon">
+    <title>Name Tag</title>
+    <style>
+        body {
+            background: #494A5F;
+            color: #D5D6E2;
+            font-weight: 500;
+            font-size: 1.05em;
+        }
+        
+        figure.snip {
+            font-family: 'Raleway', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+            margin: 10px auto;
+            min-width: 380px;
+            max-width: 480px;
+            width: 100%;
+            background: #ffffff;
+            color: #000000;
+        }
+        
+        figure.snip * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            box-shadow: #D5D6E2;
+            margin: 1px;
+        }
+        
+        figure.snip>img {
+            width: 50%;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            -webkit-transition: all 0.35s ease-in-out;
+            transition: all 0.35s ease-in-out;
+            -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+            position: relative;
+            float: right;
+            right: -15%;
+            z-index: 1;
+        }
+        
+        figure.snip figcaption {
+            padding: 20px 30px 20px 20px;
+            position: absolute;
+            left: 0;
+            width: 50%;
+        }
+        
+        figure.snip figcaption h2,
+        figure.snip figcaption p {
+            margin: 0;
+            text-align: left;
+            padding: 10px 0;
+            width: 100%;
+        }
+        
+        figure.snip figcaption h2 {
+            font-size: 1.3em;
+            font-weight: 300;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        
+        figure.snip figcaption h2 span {
+            font-weight: 800;
+        }
+        
+        figure.snip figcaption p {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        figure.snip figcaption .icons {
+            width: 100%;
+            text-align: left;
+        }
+        
+        figure.snip figcaption .icons i {
+            font-size: 26px;
+            padding: 5px;
+            top: 50%;
+            color: #000000;
+        }
+        
+        figure.snip figcaption a {
+            opacity: 0.3;
+            -webkit-transition: opacity 0.35s;
+            transition: opacity 0.35s;
+        }
+        
+        figure.snip figcaption a:hover {
+            opacity: 0.8;
+        }
+        
+        figure.snip .position {
+            width: 100%;
+            text-align: left;
+            padding: 15px 30px;
+            font-size: 0.9em;
+            opacity: 1;
+            font-style: italic;
+            color: #ffffff;
+            background: #000000;
+            clear: both;
+        }
+        
+        figure.snip.blue .position {
+            background: #20638f;
+        }
+        
+        figure.snip.red .position {
+            background: #962d22;
+        }
+        
+        figure.snip.yellow .position {
+            background: #bf6516;
+        }
+        
+        figure.snip:hover>img,
+        figure.snip.hover>img {
+            right: -12%;
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        body {
+            background-color: #212121;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: wrap;
+            margin: 0;
+            height: 100%;
+        }
+        
+        @font-face {
+            font-family: 'icomoon';
+            src: url('../fonts/icomoon.eot?rretjt');
+            src: url('../fonts/icomoon.eot?#iefixrretjt') format('embedded-opentype'), url('../fonts/icomoon.woff?rretjt') format('woff'), url('../fonts/icomoon.ttf?rretjt') format('truetype'), url('../fonts/icomoon.svg?rretjt#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        [class^="icon-"],
+        [class*=" icon-"] {
+            font-family: 'icomoon';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body,
+        html {
+            font-size: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        /* Reset */
+        
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <figure class="snip">
+            <figcaption>
+                <h2>Shawn <span>Cai</span></h2>
+                <p>Greeting~ I am a software Engineer & full stack developer with a undergraduate Bachelor of Computer Science. This is my Fully CSS project: Name Tag, you can add this to your website and make it yours.</p>
+                <div class="icons"><a href="https://xiaosanchez.github.io/"><i class="ion-ios-home"></i></a><a href="mailto:sfjpidgkmklsgyi@gmail.com"><i class="ion-ios-email"></i></a><a href="tel:510-260-7595"><i class="ion-ios-telephone"></i></a></div>
+            </figcaption><img src="https://xiaosanchez.github.io/img/about-img.png" />
+            <div class="position">Software Engineer</div>
+        </figure>
+    </div>
+
+</body>
+
+</html>
