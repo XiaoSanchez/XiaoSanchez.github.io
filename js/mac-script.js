@@ -125,7 +125,6 @@ $(function() {
             $(".appMenuSearch").val("");
             $(".app").removeClass("noMatch");
             $(".sep").removeClass("noMatch");
-            //$('.appMenuAppList').scrollTo(0,0);
         }, 100);
     }
 
@@ -430,10 +429,6 @@ $(function() {
         minWidth: 7
     });
 
-    // === Right Click ===
-    /*$(document).bind("contextmenu",function(event){
-    	event.preventDefault();
-    });*/
     $(document).bind("contextmenu", function(event) {
         event.preventDefault();
         let target = $(event.target);
@@ -447,7 +442,6 @@ $(function() {
             show();
         }
 
-        //$(".context .background").css({top: y, left: x });
         let cmSep = '<div class="sep"></div>',
             cmFilesys =
             '<div class="item">Copy</div><div class="item">Cut</div><div class="sep"></div><div class="item more">Share</div><div class="sep"></div><div class="item sFilesysDelete">Delete</div>',
@@ -457,15 +451,15 @@ $(function() {
             target.attr("data-type") +
             '" data-name="' +
             target.attr("data-name") +
-            '"></div><div class="text">Type:<i>' +
+            '"></div><div class="text">Type:<em>' +
             target.attr("data-type") +
-            '</i></div><div class="text">Name:<i>' +
+            '</em></div><div class="text">Name:<em>' +
             target.attr("data-name") +
-            '</i></div><div class="text">Created on:<i>' +
+            '</em></div><div class="text">Created on:<em>' +
             target.attr("data-date") +
-            '</i></div><div class="text">Disk usage:<i>' +
+            '</em></div><div class="text">Disk usage:<em>' +
             target.attr("data-bytes") +
-            ' bytes</i></div><div class="sep"></div><div class="item center">Close</div>',
+            ' bytes</em></div><div class="sep"></div><div class="item center">Close</div>',
             cmFilesysDeletePrompt =
             '<div class="icon" data-type="' +
             target.attr("data-type") +
@@ -514,7 +508,6 @@ $(function() {
                 if (target.hasClass("sFilesysDeleteYes")) {
                     let ObjectSelected = "";
                     ObjectSelected = $(".filesys").find(".file.selected, .folder.selected");
-                    //ObjectSelected.addClass("itworks");
                     ObjectSelected.remove();
                 }
             }
@@ -1368,7 +1361,7 @@ var cmds = {
         var tab = (sysIn().indexOf("-tab") !== -1),
             debug = (sysIn().indexOf("-debug") !== -1);
         output(["Opening " + (debug ? "debug view " : "script ") + (tab ? "on a new tab" : "") + "..."]);
-        window.open(debug ? "https://github.com/RedEdge967/MacOS-CSS" : "https://github.com/RedEdge967/MacOS-CSS", tab ? "_blank" : "_self");
+        window.open(debug ? "https://github.com/XiaoSanchez/XiaoSanchez.github.io" : "https://github.com/XiaoSanchez/XiaoSanchez.github.io", tab ? "_blank" : "_self");
     },
 
     test: function() {
