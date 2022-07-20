@@ -508,7 +508,7 @@ video {
 .window__handler .window__controls>a {
     position: relative;
     display: inline-block;
-    float: left;
+    float: none;
     height: 12px;
     width: 12px;
     margin: 6px 4px;
@@ -594,7 +594,7 @@ video {
 .window__handler .window__actions>a {
     position: relative;
     display: inline-block;
-    float: left;
+    float: none;
     height: 24px;
     width: auto;
     margin: 6px 5px;
@@ -699,7 +699,7 @@ video {
 .window__handler .window__options>a.option {
     position: relative;
     display: inline-block;
-    float: left;
+    float: none;
     height: 100%;
     width: auto;
     padding: 0 10px;
@@ -1449,7 +1449,7 @@ video {
 
 .window__main .list table tr td:first-child {
     display: inline-block;
-    float: right;
+    float: none;
     text-align: right;
     padding-right: 15px;
     padding-left: 0;
@@ -1615,7 +1615,7 @@ video {
     background: rgba(255, 255, 255, 0.1);
     padding: 5px 10px;
     border-radius: 20px;
-    float: left;
+    float: none;
     max-width: 300px;
     word-break: break-word;
 }
@@ -2023,15 +2023,6 @@ video {
 
 .filesys .sep:first-child {
     margin-top: 20px;
-}
-
-.filesys[data-visualization=icons] {
-    /*.folder[data-tag="blue"]:before { background: $tag-blue !important; }
-  .folder[data-tag="red"]:before { background: $tag-red !important; }
-  .folder[data-tag="green"]:before { background: $tag-green !important; }
-  .folder[data-tag="yellow"]:before { background: $tag-yellow !important; }
-  .folder[data-tag="orange"]:before { background: $tag-orange !important; }
-  .folder[data-tag="purple"]:before { background: $tag-purple !important; }*/
 }
 
 .filesys[data-visualization=icons] .empty {
@@ -2465,6 +2456,7 @@ video {
     height: calc(100% - 180px);
     overflow: auto;
     display: flex;
+    flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     justify-content: flex-start;
 }
