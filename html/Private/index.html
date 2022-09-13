@@ -1,0 +1,81 @@
+<!--
+ * @Author: Shawn C 111708216+guochengcai@users.noreply.github.com
+ * @Date: 2020-02-08 22:06:08
+ * @LastEditors: Shawn C 111708216+guochengcai@users.noreply.github.com
+ * @LastEditTime: 2022-08-28 21:03:28
+ * @FilePath: /guochengcai.github.io/Users/xiaocheng/Downloads/Html-Example-master/特效/爱心跳动/index1.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来的小宝的小屋</title>
+    <meta http-equiv="refresh" content="6;url=index1.html" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: pink;
+        }
+        #frame{
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 250px auto;
+        }
+        .left,.right{
+            top: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .left{
+            left: 35px;
+
+        }
+        .right{
+            right: 35px;
+            z-index: -1;
+        }
+        .bottom{
+            bottom: 36px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            transform: rotate(45deg);
+            z-index: -1;
+
+        }
+        .heart{
+            position: absolute;
+            box-shadow:0 0 40px #d5093c;
+            animation: beat .8s ease infinite normal;
+            background: linear-gradient(-90deg, #F50A45 0%, #d5093c 40%);
+        }
+        @keyframes beat {
+            0%{
+                transform: scale(1) rotate(225deg);
+                box-shadow:0 0 40px #d5093c;
+            }
+            50%{
+                transform: scale(1.1) rotate(225deg);
+                box-shadow: 0 0 70px #d5093c;
+            }
+            100%{
+                transform: scale(1) rotate(225deg);
+                box-shadow: 0 0 40px #d5093c;;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="frame">
+        <div class="heart left"></div>
+        <div class="heart right"></div>
+        <div class="heart bottom"></div>
+    </div>
+</body>
+</html>
