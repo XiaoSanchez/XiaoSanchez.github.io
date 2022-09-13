@@ -1,0 +1,42 @@
+{
+    "title": "崽崽的小屋",
+    "description": "崽崽的小屋主页",
+    "keywords": "崽崽的小屋,主页",
+    "author": "晓程",
+    "logo_img": "./img/icon/logo.png",
+    "logo_text_1": "崽崽",
+    "logo_text_2": "的小屋",
+    "github": "guochengcai",
+    "link_1": [
+        "./love.html",
+        "fa-solid fa-blog",
+        "纪念日"
+    ],
+    "link_2": [
+        "./Album.html",
+        "fa-solid fa-cloud",
+        "照片集"
+    ],
+    "link_3": [
+        "./Menu.html",
+        "fa-solid fa-music",
+        "点菜单"
+    ],
+    "link_4": [
+        "./index.html",
+        "fa-solid fa-compass",
+        "起始页"
+    ],
+    "link_5": [
+        "https:///",
+        "fa-solid fa-book-bookmark",
+        "故事集"
+    ],
+    "link_6": [
+        "https:///",
+        "fa-solid fa-flask",
+        "请期待"
+    ],
+    "Copyright_text": "崽崽",
+    "beian": "豫ICP备2022018134号-1"
+}
