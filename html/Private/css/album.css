@@ -1,0 +1,83 @@
+body {
+  background-color: #F0F5FE;
+  font-family: -apple-system, helvetica, Sans-serif;
+}
+
+h1 {
+  opacity: 0;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  -webkit-animation: fadeIn 0.5s 0s ease-in forwards;
+          animation: fadeIn 0.5s 0s ease-in forwards;
+}
+
+h2 {
+  opacity: 0;
+  color: #888;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  -webkit-animation: fadeIn 0.5s 0.4s ease-in forwards;
+          animation: fadeIn 0.5s 0.4s ease-in forwards;
+}
+
+.album {
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.photos {
+  clear: both;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.image {
+  float: left;
+  width: 20%;
+  height: 140px;
+  display: block;
+  margin: 2.5%;
+  border-radius: 3px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  transform: translate(0, -5px) scale(0.7) rotateX(80deg) perspective(800px);
+}
+
+.image--loaded {
+  opacity: 1;
+  cursor: pointer;
+  transform: translate(0, 0) scale(1) rotateX(0deg);
+}
+
+.image--loaded:hover {
+  transform: scale(1.1) rotateX(-10deg);
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.3, 1.5);
+  box-shadow: 0 10px 80px rgba(59, 68, 83, 0.3);
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(0, 4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(0, 4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

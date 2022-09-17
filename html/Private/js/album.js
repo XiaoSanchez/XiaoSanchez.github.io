@@ -1,4 +1,4 @@
-<!--
+/*
  * @Description: 
  * @Logo:                                                               ▄   ▄
  * ░██████╗██╗░░██╗░█████╗░░██╗░░░░░░░██╗███╗░░██╗  ░█████╗░░█████╗░██╗ █▀█▀█
@@ -9,23 +9,60 @@
  * ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝░░╚══╝  ░╚════╝░╚═╝░░╚═╝╚═╝ ▀▀▀▀▀▀▀
  * @Author: Shawn C
  * Copyright (c) 2022 by Shawn C., All Rights Reserved. 
--->
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>C&G &mdash; 小宝相册集</title>
-  <link rel="icon" href="./favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./css/album.css">
+ */
+const numberOfPhotos = 12;
+let photos = [];
+for (var i = 0; i < numberOfPhotos; i++) {
+  photos.push(`https://github.com/XiaoSanchez/XiaoSanchez.github.io/blob/main/html/Private/images/${i}.jpg?raw=true`);
+}
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div id="app"></div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js'></script><script  src="./js/album.js"></script>
+class AlbumImage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { loaded: false };
+  }
 
-</body>
-</html>
+  componentDidMount() {
+    const image = new Image();
+    image.onload = () => {this.setState({ loaded: true });};
+    image.src = this.props.image;
+  }
+
+  get style() {
+    if (this.state.loaded) {
+      return {
+        backgroundImage: `url(${this.props.image})` };
+
+    }
+  }
+
+  get classNames() {
+    let classNames = 'image';
+    if (this.state.loaded) {
+      classNames += ' image--loaded';
+    }
+    return classNames;
+  }
+
+  render() {
+    return /*#__PURE__*/(
+      React.createElement("div", { className: this.classNames, style: this.style }));
+
+  }}
+
+
+const App = () => /*#__PURE__*/
+React.createElement("div", { className: "album" }, /*#__PURE__*/
+React.createElement("h1", null, "小宝相册"), /*#__PURE__*/
+React.createElement("h2", null, numberOfPhotos + 1, " photos"), /*#__PURE__*/
+React.createElement("div", { className: "photos" },
+photos.map((image, i) => /*#__PURE__*/
+React.createElement(AlbumImage, { key: i, image: image }))));
+
+
+
+
+
+ReactDOM.render( /*#__PURE__*/
+React.createElement(App, null),
+document.querySelector('#app'));
