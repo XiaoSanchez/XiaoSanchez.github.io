@@ -345,7 +345,7 @@ const Movies = () => {
                     React.createElement("i", { className: movie.icon }))));
         });
     };
-    return (React.createElement(MenuSection, { icon: "fa-solid fa-camera-movie", id: "movies-section", scrollable: true, title: "电影时间" }, getMovies()));
+    return (React.createElement(MenuSection, { icon: "fa-solid fa-camera-movie", id: "movies-section", scrollable: true, title: "电影回顾" }, getMovies()));
 };
 const UserStatusButton = (props) => {
     const { userStatus, setUserStatusTo } = React.useContext(AppContext);
