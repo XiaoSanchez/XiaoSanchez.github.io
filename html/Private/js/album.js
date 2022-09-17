@@ -10,7 +10,7 @@
  * @Author: Shawn C
  * Copyright (c) 2022 by Shawn C., All Rights Reserved. 
  */
-const numberOfPhotos = 12;
+const numberOfPhotos = 13;
 let photos = [];
 for (var i = 0; i < numberOfPhotos; i++) {
   photos.push(`https://github.com/XiaoSanchez/XiaoSanchez.github.io/blob/main/html/Private/images/${i}.jpg?raw=true`);
@@ -54,7 +54,7 @@ class AlbumImage extends React.Component {
 const App = () => /*#__PURE__*/
 React.createElement("div", { className: "album" }, /*#__PURE__*/
 React.createElement("h1", null, "小宝相册"), /*#__PURE__*/
-React.createElement("h2", null, numberOfPhotos + 1, " photos"), /*#__PURE__*/
+React.createElement("h2", null, numberOfPhotos, " photos"), /*#__PURE__*/
 React.createElement("div", { className: "photos" },
 photos.map((image, i) => /*#__PURE__*/
 React.createElement(AlbumImage, { key: i, image: image }))));
