@@ -232,14 +232,14 @@ const Tools = () => {
                 image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FsY3VsYXRvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
                 label: "计算器",
                 name: "高数N级计算器",
-                href: "https://www-wolframalpha-com.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp"
+                href: "https://www.desmos.com/scientific"
             }, {
                 icon: "fa-solid fa-piggy-bank",
                 id: 3,
                 image: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmFua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
                 label: "记账",
                 name: "宝宝的账本",
-                href: ""
+                href: "http://www.keepaccounts.com/accounts/"
             }, {
                 icon: "fa-solid fa-plane",
                 id: 4,
@@ -337,6 +337,12 @@ const Movies = () => {
                 icon: "fa-solid fa-starship-freighter",
                 image: "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
                 title: "寄生虫"
+            }, {
+                desc: "海绵出水剧情:围绕蟹黄堡的秘密配方，痞老板和蟹老板睁开了新一轮的战役。",
+                id: 4,
+                icon: "fa-sharp fa-solid fa-crab",
+                image: "https://m.media-amazon.com/images/I/91dT8udHqNL._SL1500_.jpg",
+                title: "海绵宝宝历险记：海绵出水"
             }].map((movie) => {
             const styles = {
                 backgroundImage: `url(${movie.image})`
