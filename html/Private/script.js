@@ -225,7 +225,7 @@ const Tools = () => {
                 image: "https://images.unsplash.com/photo-1492011221367-f47e3ccd77a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
                 label: "天气",
                 name: "天气预报功能",
-                href: "https://m.tianqi.com/"
+                href: "https://m.tianqi.com/pingshanxian/"
             }, {
                 icon: "fa-solid fa-calculator-simple",
                 id: 2,
