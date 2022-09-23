@@ -343,6 +343,18 @@ const Movies = () => {
                 icon: "fa-sharp fa-solid fa-crab",
                 image: "https://m.media-amazon.com/images/I/91dT8udHqNL._SL1500_.jpg",
                 title: "海绵宝宝历险记：海绵出水"
+            }, {
+                desc: "本片讲述了一个由船上的水手抚养长大钢琴天才，取名1900年的传奇一生。",
+                id: 4,
+                icon: "fa-sharp fa-solid fa-ship",
+                image: "https://m.media-amazon.com/images/M/MV5BMzIwOTdmNjQtOWQ1ZS00ZWQ4LWIxYTMtOWFkM2NjODJiMGY4L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_FMjpg_UX1000_.jpg",
+                title: "海上钢琴师"
+            }, {
+                desc: "天才疯子科学家在失踪多年后突然回到女儿的身边，并在车库里搞了一个科学实验室。",
+                id: 4,
+                icon: "fa-sharp fa-solid fa-vial-virus",
+                image: "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_FMjpg_UX1000_.jpg",
+                title: "瑞克和莫蒂"
             }].map((movie) => {
             const styles = {
                 backgroundImage: `url(${movie.image})`
