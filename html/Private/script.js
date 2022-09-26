@@ -320,6 +320,12 @@ const Movies = () => {
                 image: "https://m.media-amazon.com/images/M/MV5BOTZhMDA2NjgtNGZiMC00NTE1LTk2NjctMWI3ZmZkMjQ1NGVmXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_.jpg",
                 title: "我与黑帮大佬的365天"
             }, {
+                desc: "一场谋杀案使银行家安迪蒙冤入狱，谋杀妻子及其情人的指控将囚禁他终生",
+                id: 2,
+                icon: "fa-solid fa-hat-wizard",
+                image: "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+                title: "肖申克的救赎"
+            }, {
                 desc: "当一名大学生遇到另一个被她吸引的男人时，她与一个陷入困境的青年的关系受到了考验。",
                 id: 2,
                 icon: "fa-solid fa-hat-wizard",
