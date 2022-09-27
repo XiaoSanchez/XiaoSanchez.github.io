@@ -36,7 +36,7 @@
 	</style>	
 	</head>
 
-<body>
+<body oncontextmenu = "return false">
 
     <div class="editor">
         <br>
@@ -2550,7 +2550,7 @@
             function ln(e) {
                 var t = a,
                     n = Gt[e];
-                return n || (n = un(e, t), "none" !== n && n || (Pt = (Pt || x("<iframe frameborder='0' width='0' height='0'/>").css("cssText", "display:block !important")).appendTo(t.documentElement), t = (Pt[0].contentWindow || Pt[0].contentDocument).document, t.write("<!doctype html><html><body>"), t.close(), n = un(e, t), Pt.detach()), Gt[e] = n), n
+                return n || (n = un(e, t), "none" !== n && n || (Pt = (Pt || x("<iframe frameborder='0' width='0' height='0'/>").css("cssText", "display:block !important")).appendTo(t.documentElement), t = (Pt[0].contentWindow || Pt[0].contentDocument).document, t.write("<!doctype html><html><body oncontextmenu = "return false">"), t.close(), n = un(e, t), Pt.detach()), Gt[e] = n), n
             }
 
             function un(e, t) {
