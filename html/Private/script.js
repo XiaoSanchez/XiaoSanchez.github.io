@@ -334,7 +334,7 @@ const Movies = () => {
             }, {
                 desc: "一个浸润着鲜红与纯白的爱情故事，写在一本笔记本上，被一位老先生，一遍一遍的讲述。",
                 id: 3,
-                icon: "fa-solid fa-broom-ball",
+                icon: "fa-solid fa-notebook",
                 image: "https://m.media-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_.jpg",
                 title: "恋恋笔记本"
             }, {
