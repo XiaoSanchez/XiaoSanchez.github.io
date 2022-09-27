@@ -322,7 +322,7 @@ const Movies = () => {
             }, {
                 desc: "一场谋杀案使银行家安迪蒙冤入狱，谋杀妻子及其情人的指控将囚禁他终生",
                 id: 2,
-                icon: "fa-solid fa-hat-wizard",
+                icon: "fa-solid fa-handcuffs",
                 image: "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
                 title: "肖申克的救赎"
             }, {
