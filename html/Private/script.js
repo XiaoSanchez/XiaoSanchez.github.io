@@ -361,6 +361,11 @@ const Movies = () => {
                 icon: "fa-sharp fa-solid fa-vial-virus",
                 image: "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_FMjpg_UX1000_.jpg",
                 title: "瑞克和莫蒂"
+            }, {
+                desc: "因为拥有能够和动物交流的特殊能力而在当地名声大噪。",
+                icon: "fa-sharp fa-solid fa-dog",
+                image: "https://p3-bk.byteimg.com/tos-cn-i-mlhdmxsy5m/7998e50cc74e4f9c8847b03b02210a26~tplv-mlhdmxsy5m-q75:0:0.image",
+                title: "怪医杜立德2"
             }].map((movie) => {
             const styles = {
                 backgroundImage: `url(${movie.image})`
