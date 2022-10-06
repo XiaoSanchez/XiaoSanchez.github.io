@@ -10,7 +10,7 @@
  * @Author: Shawn C
  * Copyright (c) 2022 by Shawn C., All Rights Reserved. 
  */
-const numberOfPhotos = 13;
+const numberOfPhotos = 16;
 let photos = [];
 for (var i = 0; i < numberOfPhotos; i++) {
   photos.push(`https://github.com/XiaoSanchez/XiaoSanchez.github.io/blob/main/html/Private/images/${i}.jpg?raw=true`);
