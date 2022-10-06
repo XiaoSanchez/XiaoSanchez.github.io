@@ -160,7 +160,7 @@ body input, body h1, body h3, body a, body span {
   z-index: 1;
 }
 #app #app-background #app-background-image {
-  background-image: url("https://www.myfreewalls.com/public/uploads/preview/lovers-on-the-moon-ai-5k-wallpaper-background-61644258473eh0mewlama.jpg");
+  background-image: url("./images/background-image.png");
   height: 100%;
   transition: filter 250ms, transform 250ms;
   width: 100%;
