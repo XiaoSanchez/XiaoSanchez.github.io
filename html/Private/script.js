@@ -366,6 +366,11 @@ const Movies = () => {
                 icon: "fa-sharp fa-solid fa-dog",
                 image: "https://p3-bk.byteimg.com/tos-cn-i-mlhdmxsy5m/7998e50cc74e4f9c8847b03b02210a26~tplv-mlhdmxsy5m-q75:0:0.image",
                 title: "怪医杜立德2"
+            }, {
+                desc: "一只生活在末世的僵尸，依稀只记得自己的名字里有个“R”。",
+                icon: "fa-sharp fa-solid fa-brain",
+                image: "https://images.fandango.com/ImageRenderer/400/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/151397/warmbodiesnewposter1.jpg",
+                title: "温暖的尸体"
             }].map((movie) => {
             const styles = {
                 backgroundImage: `url(${movie.image})`
