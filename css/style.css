@@ -1274,7 +1274,7 @@ p {
 }
 
 form {
-    background: #f7f2ec url('images/letter_bg.png');
+    background: #f7f2ec url('img/letter_bg.png');
     position: relative;
     overflow: hidden;
     height: 200px;
