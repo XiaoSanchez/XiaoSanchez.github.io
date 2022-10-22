@@ -21,8 +21,7 @@ Personal Website deployed on [Shawn's](http://www.xiao-cheng.site/). Currently h
 
 
 ## Welcome
-
-![resume page](./img/Shawn_welcome.gif)
+![<img src="http://www.xiao-cheng.site/">](./img/Shawn_welcome.gif)
 
 Further questions on my resume, you can contact：[sfjpidgkmklsgyi@gmail.com](https://mailto:sfjpidgkmklsgyi@gmail.com)
 
