@@ -13,3 +13,7 @@ This is my personal website which showcases my skills and experience as a softwa
 - Projects
 - Journal
 - Contact
+
+# Credits
+- Bootstrap
+- Bongo Cat
