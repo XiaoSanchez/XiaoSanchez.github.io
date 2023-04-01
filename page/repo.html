@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../favico.ico" type="image/x-icon">
+    <title>Shwan - Repos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Repositories</h1>
+    <div class="search-bar">
+        <input type="text" id="search" onkeyup="filter()" placeholder="Search by name or language">
+    </div>
+
+    <div class="container" id="repos-container">
+        <!-- GitHub repository cards will be added here -->
+    </div>
+
+    <div class="pagination" id="pagination">
+        <!-- Pagination buttons will be added here -->
+    </div>
+
+    <script>
+        // GitHub API endpoint
+        const endpoint = 'https://api.github.com/users/XiaoSanchez/repos';
+
+        // Number of repositories to display per page
+        const perPage = 6;
+
+        // Default page number
+        let currentPage = 1;
+
+        // Get repositories from GitHub API
+        async function getRepos() {
+            try {
+                const response = await fetch(endpoint);
+                const repos = await response.json();
+                return repos;
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        // Render repository cards
+        function renderRepos(repos) {
+            // Get container element
+            const container = document.getElementById('repos-container');
+
+            // Clear container
+            container.innerHTML = '';
+
+            // Filter repositories by search query
+            const searchQuery = document.getElementById('search').value.toLowerCase();
+            const filteredRepos = repos.filter(repo => {
+                return (
+                    repo.name.toLowerCase().includes(searchQuery) ||
+                    (repo.language && repo.language.toLowerCase().includes(searchQuery))
+                );
+            });
+
+            // Calculate start and end index based on current page number and number of repositories per page
+            const startIndex = (currentPage - 1) * perPage;
+            const endIndex = startIndex + perPage;
+
+            // Render repository cards for the current page
+            filteredRepos.slice(startIndex, endIndex).forEach(repo => {
+                // Create repository card element
+                const repoCard = document.createElement('div');
+                repoCard.className = 'repo-card';
+
+                // Create repository name link element
+                const repoName = document.createElement('a');
+                repoName.href = repo.html_url;
+                repoName.target = '_blank';
+                repoName.textContent = repo.name;
+                repoCard.appendChild(repoName);
+
+                // Create repository description element
+                const repoDescription = document.createElement('p');
+                repoDescription.textContent = repo.description;
+                repoCard.appendChild(repoDescription);
+
+                // Create repository language element
+                if (repo.language) {
+                    const repoLanguage = document.createElement('p');
+                    repoLanguage.textContent = `Language: ${repo.language}`;
+                    repoCard.appendChild(repoLanguage);
+                }
+
+                // Add repository card to container
+                container.appendChild(repoCard);
+            });
+
+            // Render pagination buttons
+            renderPagination(filteredRepos.length);
+        }
+
+        // Render pagination buttons
+        function renderPagination(totalRepos) {
+            // Get pagination container element
+            const pagination = document.getElementById('pagination');
+
+            // Clear pagination container
+            pagination.innerHTML = '';
+
+            // Calculate total number of pages based on number of repositories and number of repositories per page
+            const totalPages = Math.ceil(totalRepos / perPage);
+
+            // Create pagination buttons for each page
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('a');
+                pageButton.href = '#';
+                pageButton.textContent = i;
+
+                // Add event listener to page button to change current page number and re-render repository cards
+                pageButton.addEventListener('click', event => {
+                    event.preventDefault();
+                    currentPage = i;
+                    renderRepos(reposCache);
+                });
+
+                // Add active class to current page button
+                if (i === currentPage) {
+                    pageButton.className = 'active';
+                }
+
+                // Add pagination button to container
+                pagination.appendChild(pageButton);
+            }
+        }
+
+        // Filter repositories by search query and re-render repository cards
+        function filter() {
+            currentPage = 1;
+            renderRepos(reposCache);
+        }
+
+        // Get repositories from GitHub API and render repository cards
+        let reposCache = [];
+        getRepos().then(repos => {
+            reposCache = repos;
+            renderRepos(repos);
+        });
+    </script>
+</body>
+
+</html>
