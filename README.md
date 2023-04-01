@@ -7,9 +7,9 @@ Personal Website deployed on [Shawn's](http://www.xiao-cheng.site/). Currently h
 This is my personal website which showcases my skills and experience as a software engineer and AI enthusiast. It is built using Bootstrap for the frontend design, Github API to display my repositories and Codepen projects, and Cloudflare for website performance optimization and security.
 
 # Table of Contents
-Home
-Experience
-Profile
-Projects
-Journal
-Contact
+- Home
+- Experience
+- Profile
+- Projects
+- Journal
+- Contact
