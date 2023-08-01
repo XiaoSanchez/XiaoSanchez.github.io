@@ -11,66 +11,90 @@ body {
   background-position: center;
 }
 
-  
-  .container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 320px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 0.75rem 1.25rem;
-    border: 0;
-    border-radius: 4px;
-    width: 100%;
-    background-color: #2c76f6;
-    color: #fff;
-    user-select: none;
-    font-size: 1rem;
-    transform-style: preserve-3d;
-  } 
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 320px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_field {
+  padding: 20px 0px;
+  position: relative;
+}
+
+.login_input {
+  border: none;
+  border-bottom: 2px solid #D1D1D4;
+  background: none;
+  padding: 10px 0px;
+  font-weight: 700;
+  width: 100%;
+  transition: .2s;
+  outline: none;
+}
+
+.login_field span {
+  color: rgb(159, 159, 159);
+  position: absolute;
+  left: 0;
+  padding: 9px 0px;
+  transition: .5s;
+  pointer-events: none;
+  font-size: 1em;
+}
+
+.login_input:valid~span,
+.login_input:focus~span {
+  color: #007396;
+  transform: translateY(-25px);
+  font-size: 0.85em;
+}
+
+.login_input:valid,
+.login_input:focus {
+  border-bottom: 2px solid #004696;
+}
+
+button {
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #2c76f6;
+  color: #fff;
+  user-select: none;
+  font-size: 1em;
+  transform-style: preserve-3d;
+}
 
 button:before,
 button:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-radius: 4px;
-    background-color: #0743ab;
-    transform: translateZ( -5px );
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 4px;
+  background-color: #0743ab;
+  transform: translateZ(-5px);
 }
 
 button:after {
-    background-color: #042662;
-    transform: translateZ( -10px );
+  background-color: #042662;
+  transform: translateZ(-10px);
 }
 
 .button-wrapper {
@@ -79,4 +103,3 @@ button:after {
   display: flex;
   justify-content: center;
 }
-

@@ -12,11 +12,16 @@
     <div class="container">
         <h1>Login</h1>
         <form>
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required>
-        
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
+            <div class="login_field">
+                <input type="text" name="username" id="username" class="login_input" required="required">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="login_field">
+                <input type="password" name="password" id="password" class="login_input" required="required">
+                <span class="button_text">Password</span>
+                <i></i>
+            </div>
         
             <div class="button-wrapper">
                 <button>Login</button>
