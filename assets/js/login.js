@@ -40,3 +40,16 @@ button.click = nocheat;
 
 if( navigator.userAgent.match( /Android|iPhone|iPad|iPod/i ) ) notouch();
 window.addEventListener( 'touchstart', notouch );
+
+function changeImage() {
+  const imageElement = document.querySelector("img");
+  imageElement.src = "../img/2.png";
+}
+
+function changeBackImage() {
+  const imageElement = document.querySelector("img");
+  imageElement.src = "../img/1.png";
+}
+
+const passwordInput = document.getElementById("password");
+passwordInput.addEventListener("blur", changeBackImage);
