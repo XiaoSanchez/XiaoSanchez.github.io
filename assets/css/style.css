@@ -1101,6 +1101,7 @@ Credits
   font-size: 13px;
   color: #fff;
   z-index: 999999;
+  background-color: black;
 }
 
 @media (max-width: 992px) {
