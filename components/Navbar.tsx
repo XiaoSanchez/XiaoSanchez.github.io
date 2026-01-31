@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, Search } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface NavbarProps {
   onSearchClick: () => void;
@@ -25,33 +26,47 @@ const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <div className="flex space-x-8">
+            <div className="flex space-x-1">
               {navItems.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `text-sm font-medium transition-colors ${
+                    `relative px-3 py-2 text-sm font-medium tracking-tight rounded-md transition-colors ${
                       isActive
-                        ? 'text-indigo-600'
-                        : 'text-slate-500 hover:text-slate-900'
+                        ? 'text-indigo-600 bg-indigo-50/50'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                     }`
                   }
                 >
-                  {item.name}
+                  {({ isActive }) => (
+                    <>
+                      {item.name}
+                      {isActive && (
+                        <motion.div
+                          layoutId="navbar-underline"
+                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-indigo-600 mx-3 rounded-full"
+                          initial={false}
+                          transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                        />
+                      )}
+                    </>
+                  )}
                 </NavLink>
               ))}
             </div>
             
-            <div className="h-4 w-px bg-slate-200 mx-2"></div>
+            <div className="h-4 w-px bg-slate-200"></div>
             
-            <button 
+            <motion.button 
               onClick={onSearchClick}
-              className="text-slate-400 hover:text-indigo-600 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-slate-500 hover:text-indigo-600 transition-colors p-2 hover:bg-slate-50 rounded-full"
               aria-label="Search"
             >
-              <Search size={20} />
-            </button>
+              <Search size={18} />
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,28 +88,30 @@ const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100">
-          <div className="px-6 pt-2 pb-4 space-y-2">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  `block py-2 text-base font-medium ${
-                    isActive
-                      ? 'text-indigo-600'
-                      : 'text-slate-500 hover:text-slate-900'
-                  }`
-                }
-              >
-                {item.name}
-              </NavLink>
-            ))}
-          </div>
+      <motion.div 
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+        className="md:hidden bg-white border-t border-slate-100 overflow-hidden"
+      >
+        <div className="px-6 pt-2 pb-4 space-y-2">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.name}
+              to={item.path}
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `block py-2 text-base font-medium tracking-tight ${
+                  isActive
+                    ? 'text-indigo-600'
+                    : 'text-slate-500 hover:text-slate-900'
+                }`
+              }
+            >
+              {item.name}
+            </NavLink>
+          ))}
         </div>
-      )}
+      </motion.div>
     </nav>
   );
 };
