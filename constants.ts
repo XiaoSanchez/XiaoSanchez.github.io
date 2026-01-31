@@ -47,7 +47,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: "signglass",
     title: "SignGlass: First-Person View Comprehensive and Generalizable ASL Translation Using Wearable Glass",
-    authors: ["Yongxiang Cai", "Taiting Lu", "Zhenghao Li", "Hao Zhou", "Kenneth DeHaan", "Xuhai Xu", "Mahanth Gowda", "Yincheng Jin"],
+    authors: ["Yongxiang Cai*", "Taiting Lu*", "Zhenghao Li", "Hao Zhou", "Kenneth DeHaan", "Xuhai Xu", "Mahanth Gowda", "Yincheng Jin"],
     venue: "UIST",
     year: 2025,
     links: { website: "https://dl.acm.org/doi/10.1145/3746059.3747782" },
@@ -57,7 +57,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: "egoasl3d",
     title: "EgoASL3D: A Large-Scale Egocentric Stereo Dataset for American Sign Language (ASL) Translation and 3D Hand Reconstruction",
-    authors: ["Zhenghao Li", "Yanjun Zhu", "Yongxiang Cai", "Qingsen Zhang", "Yi-Shan Wu", "Taiting Lu", "Daniel Krutz", "Kenneth. J. DeHaan", "Lijun Yin", "Mahanth Gowda", "Yincheng Jin"],
+    authors: ["Zhenghao Li*", "Yanjun Zhu*", "Yongxiang Cai*", "Qingsen Zhang", "Yi-Shan Wu", "Taiting Lu", "Daniel Krutz", "Kenneth. J. DeHaan", "Lijun Yin", "Mahanth Gowda", "Yincheng Jin"],
     venue: "In Submission",
     year: 2026,
     links: {},
