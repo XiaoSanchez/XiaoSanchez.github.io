@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   researchFocus: "Human-Computer Interaction and Human-Centered AI",
   researchOneLiner: "Interpretable, controllable multimodal 3D perception for hands and human motion",
   bio: "I study how to make multimodal 3D perception models understandable and actionable in interactive settings, and how interface design changes what “good performance” means.",
-  email: "ycai3@binghamton.edu",
+  email: "mailto:ycai3@binghamton.edu",
   github: "https://github.com/YX-CAI-BU",
   scholar: "https://scholar.google.com/citations?user=i5rtqhoAAAAJ",
   orcid: "https://orcid.org/0009-0002-4061-0308",

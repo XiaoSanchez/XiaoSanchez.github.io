@@ -129,6 +129,10 @@ const CV: React.FC = () => {
                         <span className="text-sm font-bold text-slate-400 font-mono uppercase tracking-wider">2024.05 – 2024.08</span>
                     </div>
                     <div className="text-indigo-600 font-medium text-sm">Research Assistant</div>
+                    <div className="text-slate-600 leading-relaxed text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 hover:bg-indigo-50/30 transition-colors">
+                        <p className="mb-2">- Worked on egocentric 3D perception and human–AI interaction projects centered on hands, sign language, and wearable sensing, including EgoSSA, EgoASL3D, and interaction-aware hand–object reconstruction.</p>
+                        <p>- Built large-scale datasets and benchmarks for egocentric ASL and hand–object interaction, covering data capture, annotation workflows, versioned splits, and public evaluation protocols.</p>
+                    </div>
                  </div>
             </motion.div>
 
