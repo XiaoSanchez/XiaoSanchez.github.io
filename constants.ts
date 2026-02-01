@@ -11,7 +11,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/YX-CAI-BU",
   scholar: "https://scholar.google.com/citations?user=i5rtqhoAAAAJ",
   orcid: "https://orcid.org/0009-0002-4061-0308",
-  cvPdf: "/path/to/cv.pdf"
+  cvPdf: "./cv.pdf"
 };
 
 export const RESEARCH_INTERESTS: ResearchInterest[] = [
