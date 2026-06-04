@@ -4,9 +4,11 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Publications from './pages/Publications';
+import Projects from './pages/Projects';
 import CV from './pages/CV';
+import Contact from './pages/Contact';
 import SearchModal from './components/SearchModal';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -58,7 +60,9 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/publications" element={<Publications />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/cv" element={<CV />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>
   );
@@ -66,12 +70,22 @@ const AnimatedRoutes = () => {
 
 const App: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   return (
     <HashRouter>
       <ScrollToTop />
       <ErrorBoundary>
-        <div className="min-h-screen flex flex-col bg-white">
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-1 bg-indigo-600 dark:bg-indigo-500 origin-left z-50"
+          style={{ scaleX }}
+        />
+        <div className="min-h-screen flex flex-col bg-white dark:bg-slate-950 transition-colors duration-300">
           <Navbar onSearchClick={() => setIsSearchOpen(true)} />
           <main className="flex-grow w-full max-w-5xl mx-auto px-6">
             <AnimatedRoutes />

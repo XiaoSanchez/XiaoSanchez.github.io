@@ -11,7 +11,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/YX-CAI-BU",
   scholar: "https://scholar.google.com/citations?user=i5rtqhoAAAAJ",
   orcid: "https://orcid.org/0009-0002-4061-0308",
-  cvPdf: "./cv.pdf"
+  cvPdf: "/path/to/cv.pdf"
 };
 
 export const RESEARCH_INTERESTS: ResearchInterest[] = [
@@ -38,26 +38,26 @@ export const PUBLICATIONS: Publication[] = [
     id: "chi2026",
     title: "Toward Scalable ASL Education: Egocentric Stereo Sensing with LLM Feedback for Error-Aware Learning",
     authors: ["Yongxiang Cai*", "Zhenghao Li*", "Taiting Lu", "Yanjun Zhu", "Yi-Shan Wu", "Qingsen Zhang", "Xuhai Xu", "Zhanpeng Jin", "Mahanth Gowda", "Yincheng Jin"],
-    venue: "CHI: The ACM Conference on Human Factors in Computing Systems",
+    venue: "CHI",
     year: 2026,
-    links: {},
+    links: { website: "https://doi.org/10.1145/3772318.3790774" },
     takeaway: "First egocentric ASL learning system integrating stereo vision and LLM-driven feedback for error-aware learning.",
     featured: true
   },
   {
     id: "signglass",
     title: "SignGlass: First-Person View Comprehensive and Generalizable ASL Translation Using Wearable Glass",
-    authors: ["Yongxiang Cai*", "Taiting Lu*", "Zhenghao Li", "Hao Zhou", "Kenneth DeHaan", "Xuhai Xu", "Mahanth Gowda", "Yincheng Jin"],
-    venue: "UIST: The ACM Symposium on User Interface Software and Technology",
+    authors: ["Yongxiang Cai", "Taiting Lu", "Zhenghao Li", "Hao Zhou", "Kenneth DeHaan", "Xuhai Xu", "Mahanth Gowda", "Yincheng Jin"],
+    venue: "UIST",
     year: 2025,
-    links: { website: "https://dl.acm.org/doi/10.1145/3746059.3747782" },
+    links: { website: "https://doi.org/10.1145/3746059.3747782" },
     takeaway: "First egocentric SLT system using smart glasses with real-time feedback.",
     featured: true
   },
   {
     id: "egoasl3d",
     title: "EgoASL3D: A Large-Scale Egocentric Stereo Dataset for American Sign Language (ASL) Translation and 3D Hand Reconstruction",
-    authors: ["Zhenghao Li*", "Yanjun Zhu*", "Yongxiang Cai*", "Qingsen Zhang", "Yi-Shan Wu", "Taiting Lu", "Daniel Krutz", "Kenneth. J. DeHaan", "Lijun Yin", "Mahanth Gowda", "Yincheng Jin"],
+    authors: ["Zhenghao Li", "Yanjun Zhu", "Yongxiang Cai", "Qingsen Zhang", "Yi-Shan Wu", "Taiting Lu", "Daniel Krutz", "Kenneth. J. DeHaan", "Lijun Yin", "Mahanth Gowda", "Yincheng Jin"],
     venue: "In Submission",
     year: 2026,
     links: {},
@@ -68,8 +68,8 @@ export const PUBLICATIONS: Publication[] = [
     id: "egossa",
     title: "EgoSSA: Egocentric Stereo Structure-Aware 3D Hand Reconstruction for American Sign Language Gesture Modeling",
     authors: ["Yongxiang Cai", "Zhenghao Li", "Yanjun Zhu", "Taiting Lu", "Kenneth. J. DeHaan", "Lijun Yin", "Mahanth Gowda", "Yincheng Jin"],
-    venue: "In Submission",
-    year: 2025,
+    venue: "FG",
+    year: 2026,
     links: {},
     takeaway: "Structure-aware 3D hand reconstruction for ASL gestures.",
     featured: true
@@ -77,6 +77,7 @@ export const PUBLICATIONS: Publication[] = [
 ];
 
 export const NEWS: NewsItem[] = [
+  { id: "n4", date: "May 2026", content: "FG 2026 acceptance (first author)." },
   { id: "n1", date: "Jan 2026", content: "CHI 2026 acceptance (first author)." },
   { id: "n2", date: "Oct 2025", content: "UIST 2025 Special Recognition for Belonging & Inclusion Award." },
   { id: "n3", date: "Apr 2025", content: "UIST 2025 acceptance (first author)." }

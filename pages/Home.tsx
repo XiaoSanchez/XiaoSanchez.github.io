@@ -1,9 +1,10 @@
 import React from 'react';
-import { Mail, FileText, Github, GraduationCap, ArrowRight, Info, Globe, Hourglass } from 'lucide-react';
+import { Mail, FileText, Github, GraduationCap, ArrowRight, Info, Globe, Hourglass, TrendingUp } from 'lucide-react';
 import { PERSONAL_INFO, RESEARCH_INTERESTS, PUBLICATIONS, NEWS } from '../constants';
 import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import Page from '../components/Page';
+import ResearchTimeline from '../components/ResearchTimeline';
 
 const Home: React.FC = () => {
   const selectedPubs = PUBLICATIONS.slice(0, 6);
@@ -36,15 +37,15 @@ const Home: React.FC = () => {
       >
         <div className="flex-1 space-y-8">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-3 tracking-tight">{PERSONAL_INFO.name}</h1>
-            <p className="text-xl text-slate-600 font-medium">{PERSONAL_INFO.title}</p>
-            <p className="text-lg text-slate-500">{PERSONAL_INFO.affiliation}</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight">{PERSONAL_INFO.name}</h1>
+            <p className="text-xl text-slate-600 dark:text-slate-200 font-medium">{PERSONAL_INFO.title}</p>
+            <p className="text-lg text-slate-500 dark:text-slate-300">{PERSONAL_INFO.affiliation}</p>
           </div>
           
-          <div className="space-y-4 text-lg text-slate-700 leading-relaxed max-w-2xl">
-            <p className="font-bold text-slate-900">{PERSONAL_INFO.researchFocus}</p>
-            <p className="font-medium text-slate-800">{PERSONAL_INFO.researchOneLiner}.</p>
-            <p className="text-slate-600">{PERSONAL_INFO.bio}</p>
+          <div className="space-y-4 text-lg text-slate-700 dark:text-slate-200 leading-relaxed max-w-2xl">
+            <p className="font-bold text-slate-900 dark:text-white">{PERSONAL_INFO.researchFocus}</p>
+            <p className="font-medium text-slate-800 dark:text-slate-100">{PERSONAL_INFO.researchOneLiner}.</p>
+            <p className="text-slate-600 dark:text-slate-200">{PERSONAL_INFO.bio}</p>
           </div>
 
           <div className="flex flex-wrap gap-3 pt-2">
@@ -63,8 +64,8 @@ const Home: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-lg transition font-medium shadow-sm ${
                   btn.primary 
-                    ? 'bg-slate-900 text-white hover:bg-indigo-600' 
-                    : 'border border-slate-200 text-slate-700 hover:border-indigo-600 hover:text-indigo-600'
+                    ? 'bg-slate-900 text-white hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-500' 
+                    : 'border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-indigo-600 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400'
                 }`}
               >
                 <btn.icon size={18} /> {btn.label}
@@ -81,7 +82,7 @@ const Home: React.FC = () => {
         >
           <div className="absolute inset-0 bg-indigo-600 rounded-full blur opacity-10 group-hover:opacity-20 transition duration-500"></div>
           <img 
-            src="https://media.licdn.com/dms/image/v2/D4E03AQFdWba2FJvDVA/profile-displayphoto-crop_800_800/B4EZwVgn7fG0AI-/0/1769887400206?e=1771459200&v=beta&t=ZVUg8EQw957ds9yDfwyNK_a-dlUpANbI364nUicoTl8" 
+            src="https://media.licdn.com/dms/image/v2/D4E35AQGpC8fmhE5jZQ/profile-framedphoto-shrink_800_800/B4EZwVgoZlGoAg-/0/1769887401842?e=1781190000&v=beta&t=Pq6Q9Q8V2ldqKut6ixBPvF4BSM6FZxvKtN5sxuOrJMM" 
             alt="Yongxiang Cai" 
             className="w-full h-full object-cover rounded-full shadow-lg border border-slate-100 relative z-10"
           />
@@ -94,12 +95,12 @@ const Home: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="bg-slate-50 border border-slate-100 rounded-xl p-6 flex gap-4 items-start"
+        className="bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl p-6 flex gap-4 items-start"
       >
          <Info className="text-indigo-600 flex-shrink-0 mt-1" size={24} />
          <div>
-             <h3 className="font-bold text-slate-900 mb-2">For Internship Opportunities</h3>
-             <p className="text-slate-700 leading-relaxed text-sm md:text-base">
+             <h3 className="font-bold text-slate-900 dark:text-white mb-2">For Internship Opportunities</h3>
+             <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-sm md:text-base">
                  I am seeking a research internship focused on HCI and Human-Centered AI. My research explores interpretability and user control for multimodal 3D perception of hands and motion, including how explanations, uncertainty, and interaction design affect user decisions and model reliability. Please <a href={`mailto:${PERSONAL_INFO.email}`} className="text-indigo-600 underline font-medium hover:text-indigo-800">email me</a> with your project area, timeline, and any relevant links.
              </p>
          </div>
@@ -113,42 +114,61 @@ const Home: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="flex justify-between items-baseline mb-8 pb-3 border-b border-slate-100">
-             <h2 className="text-2xl font-bold text-slate-900">Recent News</h2>
+          <div className="flex justify-between items-baseline mb-8 pb-3 border-b border-slate-100 dark:border-slate-800">
+             <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Academic Updates</h2>
           </div>
           <div className="space-y-4">
              {recentNews.map(news => (
                <motion.div 
                  key={news.id} 
                  variants={itemVariants}
-                 className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 text-sm group p-3 rounded-lg hover:bg-slate-50 transition -mx-3"
+                 className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 text-sm group p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition -mx-3"
                >
-                 <span className="text-slate-400 font-mono font-medium md:w-24 flex-shrink-0 md:text-right group-hover:text-indigo-600 transition-colors">{news.date}</span>
-                 <span className="text-slate-700 font-medium group-hover:text-slate-900 transition-colors">{news.content}</span>
+                 <span className="text-slate-400 dark:text-slate-400 font-mono font-medium md:w-24 flex-shrink-0 md:text-right group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">{news.date}</span>
+                 <span className="text-slate-700 dark:text-slate-200 font-medium group-hover:text-slate-900 dark:group-hover:text-white transition-colors">{news.content}</span>
                </motion.div>
              ))}
           </div>
         </motion.section>
       )}
 
-      {/* 3.3 Research Interests */}
+      {/* 3.3 Research Highlights (D3 Visualization) */}
       <motion.section
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h2 className="text-2xl font-bold text-slate-900 mb-8 pb-3 border-b border-slate-100">Research Interests</h2>
+        <div className="flex justify-between items-baseline mb-8 pb-3 border-b border-slate-100 dark:border-slate-800">
+           <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+             <TrendingUp size={24} className="text-indigo-500" />
+             Research Highlights
+           </h2>
+        </div>
+        <div className="bg-slate-50/50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 p-6 md:p-8 rounded-2xl">
+          <p className="text-slate-600 dark:text-slate-300 mb-6 font-medium text-sm">Output consistency over the past years.</p>
+          <ResearchTimeline />
+        </div>
+      </motion.section>
+
+      {/* 3.4 Research Interests */}
+      <motion.section
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8 pb-3 border-b border-slate-100 dark:border-slate-800">Research Interests</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {RESEARCH_INTERESTS.map((interest, idx) => (
             <motion.div 
               key={idx} 
               variants={itemVariants}
               whileHover={{ scale: 1.01 }}
-              className="p-6 border border-slate-100 rounded-xl bg-slate-50/50 hover:bg-slate-50 transition"
+              className="p-6 border border-slate-100 dark:border-slate-800 rounded-xl bg-slate-50/50 dark:bg-slate-900/50 hover:bg-slate-50 dark:hover:bg-slate-900 transition"
             >
-              <h3 className="font-bold text-slate-900 text-lg">{interest.title}</h3>
-              <p className="text-slate-600 mt-2 leading-relaxed">{interest.description}</p>
+              <h3 className="font-bold text-slate-900 dark:text-white text-lg">{interest.title}</h3>
+              <p className="text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">{interest.description}</p>
             </motion.div>
           ))}
         </div>
@@ -161,9 +181,9 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="flex justify-between items-baseline mb-8 pb-3 border-b border-slate-100">
-          <h2 className="text-2xl font-bold text-slate-900">Selected Publications</h2>
-          <Link to="/publications" className="text-sm font-medium text-indigo-600 hover:text-indigo-800 flex items-center gap-1 transition group">
+        <div className="flex justify-between items-baseline mb-8 pb-3 border-b border-slate-100 dark:border-slate-800">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Selected Publications</h2>
+          <Link to="/publications" className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 flex items-center gap-1 transition group">
             View All <motion.span animate={{ x: [0, 3, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}><ArrowRight size={16} /></motion.span>
           </Link>
         </div>
@@ -171,26 +191,26 @@ const Home: React.FC = () => {
           {selectedPubs.map(pub => (
             <motion.div key={pub.id} variants={itemVariants}>
               <div className="flex justify-between items-baseline">
-                <a href={pub.links.website || pub.links.pdf || '#'} className="font-semibold text-lg text-slate-900 hover:text-indigo-600 transition">
+                <a href={pub.links.website || pub.links.pdf || '#'} className="font-semibold text-lg text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-300 transition">
                   {pub.title}
                 </a>
               </div>
-              <div className="text-slate-600 mt-1">
+              <div className="text-slate-600 dark:text-slate-300 mt-1">
                 {pub.authors.map((author, i) => (
-                  <span key={i} className={author.includes("Yongxiang") ? "font-bold text-slate-900" : ""}>
+                  <span key={i} className={author.includes("Yongxiang") ? "font-bold text-slate-900 dark:text-white" : ""}>
                     {author}{i < pub.authors.length - 1 ? ", " : ""}
                   </span>
                 ))}
               </div>
               <div className="flex items-center gap-3 text-sm mt-2">
-                <span className="font-medium text-slate-900 flex items-center gap-1.5">
+                <span className="font-medium text-slate-900 dark:text-slate-200 flex items-center gap-1.5">
                    {pub.venue === 'In Submission' && <Hourglass size={14} className="text-amber-500" />}
                    {pub.venue} {pub.year}
                 </span>
-                {Object.keys(pub.links).length > 0 && <span className="text-slate-300">|</span>}
+                {Object.keys(pub.links).length > 0 && <span className="text-slate-300 dark:text-slate-700">|</span>}
                 <div className="flex gap-3">
                   {Object.entries(pub.links).map(([key, url]) => (
-                     url && <a key={key} href={url} className="text-slate-500 hover:text-indigo-600 capitalize font-medium transition flex items-center gap-1">
+                     url && <a key={key} href={url} className="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 capitalize font-medium transition flex items-center gap-1">
                         {key === 'pdf' && <FileText size={14} />}
                         {key === 'website' && <Globe size={14} />}
                         {key}
